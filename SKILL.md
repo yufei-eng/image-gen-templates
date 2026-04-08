@@ -100,16 +100,16 @@ END
 
 ## Section 1: Template Registry
 
-33 templates organized in 6 categories. Read `TEMPLATES.md` in the same skill directory
+50 templates organized in 6 categories (A01-A23, B01-B07, C01-C04, D01-D03, E01-E08, F01-F08). Read `TEMPLATES.md` in the same skill directory
 for the full prompt patterns.
 
-### Category A: Stylization (14 templates) — P0
+### Category A: Stylization (23 templates) — P0
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
 | A01 | Chibi Cartoon | chibi, Q-version, cute cartoon, mini me | Q版, 卡通, 萌版, 迷你 | Photo |
 | A02 | 3D Pixar Animation | 3D, Pixar, Disney, animated | 3D, 皮克斯, 迪士尼, 动画 | Photo |
-| A03 | Comic / Manga | comic, manga, anime, graphic novel | 漫画, 动漫, 日漫 | Photo |
+| A03 | Comic / Manga | comic, manga, graphic novel | 漫画, 日漫 | Photo |
 | A04 | Sketch / Pencil | sketch, pencil, drawing, graphite | 素描, 铅笔画, 手绘 | Photo |
 | A05 | Clay / Claymation | clay, claymation, plasticine, stop-motion | 黏土, 粘土, 定格动画 | Photo |
 | A06 | 80s Retro Animation | 80s, retro, synthwave, vintage cartoon | 80年代, 复古, 怀旧动画 | Photo |
@@ -121,8 +121,17 @@ for the full prompt patterns.
 | A12 | 90s Yearbook | 90s, yearbook, high school, retro photo | 90年代, 毕业照, 复古照 | Photo |
 | A13 | High Fashion | high fashion, vogue, editorial, couture | 高级时尚, 时尚大片, 杂志 | Photo |
 | A14 | Cyberpunk Portrait | cyberpunk, neon, cyber, futuristic | 赛博朋克, 赛博, 霓虹 | Photo |
+| A15 | Oil Painting / Classical | oil painting, classical, renaissance | 油画, 古典, 印象派 | Photo |
+| A16 | Pixel Art | pixel art, 8-bit, retro game, 16-bit | 像素, 像素风, 像素画 | Photo |
+| A17 | Flat / Vector Illustration | flat, vector, minimalist illustration | 平面插画, 扁平风, 矢量 | Photo |
+| A18 | Anime / 二次元 | anime, 二次元, Japanese animation | 二次元, 动漫, 番剧 | Photo |
+| A19 | Wool Felt / Needle Felt | wool felt, needle felt, felted | 羊毛毡, 毛毡, 手工毡 | Photo |
+| A20 | Colored Pencil | colored pencil, Prismacolor, crayon | 彩铅, 彩铅画, 彩色铅笔 | Photo |
+| A21 | Pop Art | pop art, Warhol, Lichtenstein | 波普, 波普艺术, 名画风 | Photo |
+| A22 | Miniature / Diorama | miniature, diorama, tilt-shift | 微缩景观, 微缩, 小人国 | Photo |
+| A23 | Children's Drawing | children drawing, kid art, crayon | 儿童绘画, 儿童画, 童画 | Photo |
 
-### Category B: Portrait (5 templates) — P0
+### Category B: Portrait (7 templates) — P0
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
@@ -131,14 +140,17 @@ for the full prompt patterns.
 | B03 | Pet Humanization | pet humanization, anthropomorphic | 宠物拟人, 宠物拟人化 | Pet photo |
 | B04 | Emoji / Sticker Pack | emoji, sticker, emoticon | 表情包, 贴纸, 表情 | Photo |
 | B05 | Avatar / Profile Picture | avatar, profile, pfp, icon | 头像, 个性头像, 头像生成 | Photo |
+| B06 | Film / Cinematic Portrait | film photography, cinematic, movie still | 电影写真, 胶片, 电影感 | Photo |
+| B07 | Dreamy / Hazy Portrait | dreamy, hazy, soft focus, ethereal | 朦胧, 朦胧肖像, 梦幻 | Photo |
 
-### Category C: Pets & Babies (3 templates) — P0
+### Category C: Pets & Babies (4 templates) — P0
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
 | C01 | Pet Stylization | cute pet, pet portrait, kawaii pet | 萌宠, 宠物造型, 宠物 | Pet photo |
 | C02 | Baby Comic Grid | baby comic, baby expressions, grid | 宝宝, 宝宝漫画, 宫格 | Baby photo |
 | C03 | Pet VOGUE Magazine | pet magazine, pet cover, VOGUE | 宠物杂志, 宠物封面 | Pet photo |
+| C04 | Pet Costume Play | pet costume, pet mugshot, pet dress-up | 宠物入狱, 萌宠打工, 宠物变装 | Pet photo |
 
 ### Category D: Try-on & Editing (3 templates) — P1
 
@@ -148,7 +160,7 @@ for the full prompt patterns.
 | D02 | Hairstyle Change | hairstyle, haircut, hair color | 发型, 换发型, 理发 | Photo + text |
 | D03 | Background Change | background, backdrop, remove bg | 换背景, 抠图, 背景 | Photo + text |
 
-### Category E: Social Media & Creative (5 templates) — P1
+### Category E: Social Media & Creative (8 templates) — P1/P2
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
@@ -157,8 +169,11 @@ for the full prompt patterns.
 | E03 | Storyboard / Comic Strip | storyboard, comic strip, panels | 分镜, 漫画条, 故事板 | Text (+photo) |
 | E04 | Handwritten Poster | handwritten, bulletin, class poster | 手抄报, 板报 | Text |
 | E05 | Illustration | illustration, artwork, digital art | 插画, 插图, 绘画 | Text |
+| E06 | YouTube Thumbnail | YouTube, thumbnail, video cover | YouTube缩略图, 封面, 视频封面 | Text (+photo) |
+| E07 | Educational Visual | educational, infographic, diagram | 教育, 知识图, 教学图 | Text |
+| E08 | Picture Book Illustration | picture book, storybook, bedtime | 绘本, 童话, 儿童读物 | Text |
 
-### Category F: Professional Design (6 templates) — P1
+### Category F: Professional Design (8 templates) — P1/P2
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
@@ -168,6 +183,8 @@ for the full prompt patterns.
 | F04 | Logo Design | logo, brand, identity, icon | Logo, 标志, 品牌 | Text |
 | F05 | Merchandise Design | merchandise, keychain, figure | 手办, 钥匙扣, 周边 | Photo/text |
 | F06 | Coloring Book Page | coloring, line art, coloring page | 涂色, 线稿, 涂色页 | Text (+photo) |
+| F07 | Game Asset Design | game character, concept art, game asset | 游戏, 游戏角色, 游戏资产 | Text/photo |
+| F08 | Product Marketing Design | marketing, ad creative, campaign | 营销, 广告, 产品营销 | Product + text |
 
 ---
 
@@ -177,24 +194,29 @@ When the skill is activated and the user has NO specific image request, present 
 template menu to inspire exploration. Use this EXACT format:
 
 ```
-I can help you create amazing images with 33 high-quality templates! Here are the
+I can help you create amazing images with 50 high-quality templates! Here are the
 most popular ones to try:
 
-🎨 **STYLIZATION** (transform your photo into a new style)
+🎨 **STYLIZATION** (23 styles to transform your photo)
   • Chibi Cartoon — Turn yourself into an adorable Q-version character
   • 3D Pixar Animation — Become a Disney/Pixar movie character
-  • Clay/Claymation — Transform into a cute clay figure
-  • Comic/Manga — Get your manga character portrait
-  • Sketch/Pencil — Beautiful hand-drawn pencil portrait
+  • Anime / 二次元 — Beautiful Japanese animation style portrait
+  • Oil Painting — Classical masterpiece portrait
+  • Pixel Art — Retro 8-bit/16-bit game character
+  • Wool Felt — Adorable handmade needle-felted figure
+  • Pop Art — Bold Warhol-style color grid
+  • Miniature / Diorama — Tiny figurine in a miniature world
+  • Clay, Sketch, Watercolor, Ukiyo-e, Cyberpunk, and 14 more...
 
 📸 **PORTRAITS & IDENTITY**
   • K-Pop Star — Get the idol concept photo treatment
-  • High Fashion — Vogue cover-worthy editorial portrait
-  • 90s Yearbook — Nostalgic retro yearbook photo
-  • Studio Photoshoot — Professional portrait photography
+  • Film / Cinematic — Moody arthouse movie still portrait
+  • Dreamy / Hazy — Ethereal soft-focus romantic portrait
+  • 90s Yearbook, High Fashion, Studio Photoshoot, ID Photo
 
 🐾 **PETS & BABIES**
   • Pet Humanization — Your pet in a business suit
+  • Pet Costume Play — Your pet's hilarious mugshot or "working" photo
   • Pet VOGUE Magazine — Your pet on a fashion magazine cover
   • Baby Comic Grid — Adorable 4-panel baby expression comic
 
@@ -204,10 +226,12 @@ most popular ones to try:
   • Background Change — Teleport to any location
 
 🎯 **CREATIVE & DESIGN**
-  • Poster Design — Professional event posters
-  • Logo Design — Brand identity from scratch
-  • E-commerce Product — Stunning product photography
-  • Interior Design — Redesign any room
+  • YouTube Thumbnail — High-impact clickable video covers
+  • Picture Book — Magical storybook illustrations
+  • Educational Visual — Infographics and diagrams
+  • Game Character Design — Professional concept art sheets
+  • Product Marketing — Premium ad campaign visuals
+  • Poster, Logo, E-commerce, Interior Design, and more...
 
 Just upload a photo and tell me which template to use, or describe what you want
 and I'll match the best template for you!
@@ -236,14 +260,26 @@ Template Registry above. If a keyword matches, select that template.
 | photo + "clay" / "黏土" | A05 |
 | photo + "古风" / "国风" / "水墨" | A08 |
 | photo + "水彩" / "watercolor" | A09 |
+| photo + "油画" / "oil painting" / "classical" / "古典" | A15 |
+| photo + "像素" / "pixel" / "8-bit" / "retro game" | A16 |
+| photo + "扁平" / "flat" / "vector" / "平面插画" | A17 |
+| photo + "二次元" / "anime" / "动漫" / "番剧" | A18 |
+| photo + "羊毛毡" / "wool felt" / "needle felt" / "毛毡" | A19 |
+| photo + "彩铅" / "colored pencil" / "彩色铅笔" | A20 |
+| photo + "波普" / "pop art" / "Warhol" / "名画风" | A21 |
+| photo + "微缩" / "miniature" / "diorama" / "小人国" | A22 |
+| photo + "儿童画" / "children drawing" / "kid art" / "童画" | A23 |
 | photo + "写真" / "portrait" / "photoshoot" | B01 |
 | photo + "证件照" / "ID photo" / "passport" | B02 |
 | pet photo + "拟人" / "humanize" / "as human" | B03 |
 | photo + "表情包" / "sticker" / "emoji" | B04 |
 | photo + "头像" / "avatar" / "profile" | B05 |
+| photo + "电影" / "cinematic" / "film photography" / "胶片" | B06 |
+| photo + "朦胧" / "dreamy" / "hazy" / "梦幻" / "soft focus" | B07 |
 | pet photo + styling keywords | C01 |
 | baby photo + "漫画" / "comic" / "grid" | C02 |
 | pet photo + "杂志" / "magazine" / "VOGUE" | C03 |
+| pet photo + "入狱" / "mugshot" / "打工" / "costume" / "变装" | C04 |
 | photo + "换装" / "换衣服" / "try on" / "outfit" | D01 |
 | photo + "发型" / "hairstyle" / "hair" | D02 |
 | photo + "背景" / "background" | D03 |
@@ -252,12 +288,17 @@ Template Registry above. If a keyword matches, select that template.
 | text about stories / panels / storyboard | E03 |
 | text about 手抄报 / bulletin | E04 |
 | text about illustration / artwork / scene | E05 |
+| text about YouTube / thumbnail / 缩略图 / video cover | E06 |
+| text about educational / infographic / 教育 / diagram | E07 |
+| text about picture book / 绘本 / storybook / 童话 | E08 |
 | product + "电商" / "e-commerce" / "product shot" | F01 |
 | photo + "贴纸集" / "sticker set" | F02 |
 | room photo + "设计" / "design" / "装修" | F03 |
 | text about logo / brand / identity | F04 |
 | photo/text + "手办" / "钥匙扣" / "figure" | F05 |
 | text about coloring / 涂色 / line art | F06 |
+| text about game / 游戏 / character design / concept art | F07 |
+| text/product about marketing / 营销 / ad / campaign / 广告 | F08 |
 
 ### Step 3: Ambiguity resolution
 

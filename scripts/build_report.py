@@ -57,12 +57,43 @@ TEMPLATE_INFO = {
     "F04": {"name": "Logo Design", "cat": "Design", "pri": "P1", "kw": "logo, 标志, brand"},
     "F05": {"name": "Merchandise Design", "cat": "Design", "pri": "P1", "kw": "merchandise, 手办, figure"},
     "F06": {"name": "Coloring Book Page", "cat": "Design", "pri": "P1", "kw": "coloring, 涂色, line art"},
+    "A15": {"name": "Oil Painting / Classical", "cat": "Stylization", "pri": "P0", "kw": "oil painting, 油画, classical"},
+    "A16": {"name": "Pixel Art", "cat": "Stylization", "pri": "P0", "kw": "pixel art, 像素, 8-bit"},
+    "A17": {"name": "Flat / Vector Illustration", "cat": "Stylization", "pri": "P0", "kw": "flat, vector, 平面插画"},
+    "A18": {"name": "Anime / 二次元", "cat": "Stylization", "pri": "P0", "kw": "anime, 二次元, 动漫"},
+    "A19": {"name": "Wool Felt / Needle Felt", "cat": "Stylization", "pri": "P0", "kw": "wool felt, 羊毛毡, felted"},
+    "A20": {"name": "Colored Pencil", "cat": "Stylization", "pri": "P0", "kw": "colored pencil, 彩铅, crayon"},
+    "A21": {"name": "Pop Art", "cat": "Stylization", "pri": "P0", "kw": "pop art, 波普, Warhol"},
+    "A22": {"name": "Miniature / Diorama", "cat": "Stylization", "pri": "P0", "kw": "miniature, 微缩景观, diorama"},
+    "A23": {"name": "Children's Drawing", "cat": "Stylization", "pri": "P0", "kw": "children drawing, 儿童画"},
+    "B06": {"name": "Film / Cinematic Portrait", "cat": "Portrait", "pri": "P0", "kw": "film, 电影写真, cinematic"},
+    "B07": {"name": "Dreamy / Hazy Portrait", "cat": "Portrait", "pri": "P0", "kw": "dreamy, 朦胧, hazy"},
+    "C04": {"name": "Pet Costume Play", "cat": "Pets & Babies", "pri": "P0", "kw": "pet costume, 宠物入狱, mugshot"},
+    "E06": {"name": "YouTube Thumbnail", "cat": "Creative", "pri": "P2", "kw": "YouTube, thumbnail, 缩略图"},
+    "E07": {"name": "Educational Visual", "cat": "Creative", "pri": "P2", "kw": "educational, infographic, 教育"},
+    "E08": {"name": "Picture Book Illustration", "cat": "Creative", "pri": "P1", "kw": "picture book, 绘本, storybook"},
+    "F07": {"name": "Game Asset Design", "cat": "Design", "pri": "P2", "kw": "game, 游戏, character design"},
+    "F08": {"name": "Product Marketing Design", "cat": "Design", "pri": "P2", "kw": "marketing, 营销, ad campaign"},
 }
 
 
-def image_to_base64(path: str) -> str | None:
+def image_to_base64(path: str, max_dim: int = 800, quality: int = 80) -> str | None:
+    """Convert image to compressed JPEG base64 data URI for HTML embedding."""
     if not os.path.exists(path):
         return None
+    try:
+        from PIL import Image
+        import io
+        img = Image.open(path)
+        img.thumbnail((max_dim, max_dim), Image.LANCZOS)
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=quality, optimize=True)
+        data = buf.getvalue()
+        return f"data:image/jpeg;base64,{base64.b64encode(data).decode()}"
+    except ImportError:
+        pass
     with open(path, "rb") as f:
         data = f.read()
     ext = os.path.splitext(path)[1].lower()
@@ -105,8 +136,11 @@ def build_html(output_path: str = None):
         has_image = False
         image_html = ""
         if tid in meta:
-            for run in meta[tid]:
-                if run.get("success") and run.get("output"):
+            entries = meta[tid]
+            if isinstance(entries, dict):
+                entries = [entries]
+            for run in entries:
+                if isinstance(run, dict) and run.get("success") and run.get("output"):
                     b64 = image_to_base64(run["output"])
                     if b64:
                         image_html = f'<img src="{b64}" class="thumb" />'
@@ -143,9 +177,15 @@ def build_html(output_path: str = None):
     max_template = max(scored_templates, key=lambda x: x[1]) if scored_templates else ("—", 0)
     min_template = min(scored_templates, key=lambda x: x[1]) if scored_templates else ("—", 0)
 
+    def _meta_entries(tid):
+        entries = meta.get(tid, [])
+        if isinstance(entries, dict):
+            return [entries]
+        return entries
+
     total_generated = sum(
         1 for tid in TEMPLATE_INFO
-        if tid in meta and any(r.get("success") for r in meta.get(tid, []))
+        if tid in meta and any(r.get("success") for r in _meta_entries(tid) if isinstance(r, dict))
     )
 
     html = f"""<!DOCTYPE html>
@@ -248,7 +288,7 @@ tr:hover {{ background: #1a1a1a; }}
             "priority": info["pri"],
             "keywords": info["kw"],
             "scores": score_data,
-            "has_sample": tid in meta and any(r.get("success") for r in meta.get(tid, [])),
+            "has_sample": tid in meta and any(r.get("success") for r in _meta_entries(tid) if isinstance(r, dict)),
         })
 
     json_path = REPORT_DIR / "template-inventory.json"

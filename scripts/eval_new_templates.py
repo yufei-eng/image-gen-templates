@@ -1,0 +1,366 @@
+#!/usr/bin/env python3
+"""Batch-generate test images for the 17 new templates (A15-A23, B06-B07, C04, E06-E08, F07-F08)."""
+
+import asyncio
+import json
+import os
+import sys
+from pathlib import Path
+from datetime import datetime
+
+sys.path.insert(0, str(Path(__file__).parent))
+from generate import generate_image
+
+RESULTS_DIR = Path(__file__).parent.parent / "test" / "results"
+SAMPLES_DIR = Path(__file__).parent.parent / "test" / "samples"
+META_FILE = RESULTS_DIR / "evaluation-meta.json"
+
+SELFIE = str(SAMPLES_DIR / "selfie.jpg")
+PET = str(SAMPLES_DIR / "pet.jpg")
+
+NEW_TEMPLATES = {
+    "A15": {
+        "name": "Oil Painting / Classical",
+        "prompt": (
+            "Convert the uploaded photo into a classical oil painting on stretched linen canvas. "
+            "Preserve the subject's complete facial identity while rendering with rich, layered oil paint technique. "
+            "Old-master classical realism in the manner of Rembrandt. Build from a warm umber ground layer, with "
+            "transparent glazing for luminous skin tones, opaque impasto highlights on the forehead and nose bridge. "
+            "The subject wears a rich velvet garment with intricate fabric folds catching the light. "
+            "Background: dark, atmospheric chiaroscuro — a deep umber-to-black gradient. "
+            "Lighting: dramatic Rembrandt lighting from upper-left, deep shadows on the far side. "
+            "Canvas weave texture and minor craquelure at edges for authenticity. "
+            "Composition: three-quarter view, head-and-shoulders. Aspect ratio 3:4. "
+            "The overall style is a museum-worthy oil portrait with masterful classical painting technique. "
+            "No modern elements, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A16": {
+        "name": "Pixel Art",
+        "prompt": (
+            "Transform the uploaded photo into a charming retro pixel art portrait. Preserve key facial features "
+            "and hairstyle while rendering entirely in 16-bit era pixel art style, reminiscent of classic SNES RPG "
+            "character portraits. Limited palette of 32 carefully selected colors, each pixel clearly defined as a "
+            "discrete square block. No anti-aliasing, no gradients — all shading through dithering patterns. "
+            "The subject is depicted as an RPG hero character with expressive large eyes with pixel-perfect "
+            "highlight dots. Background: a clean solid dark blue. Frame as a classic RPG dialogue portrait. "
+            "Composition: centered head-and-shoulders pixel portrait. Aspect ratio 1:1. "
+            "The overall style is a professionally crafted pixel art portrait worthy of a retro video game. "
+            "No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A17": {
+        "name": "Flat / Vector Illustration",
+        "prompt": (
+            "Transform the uploaded photo into a clean, modern flat vector illustration portrait. Preserve the "
+            "subject's facial identity — hairstyle, face shape, and key distinguishing features — while applying "
+            "bold geometric simplification. Contemporary flat design: crisp geometric shapes, zero gradients, "
+            "flat solid color fills with hard edges. A curated palette of 5-7 harmonious flat colors — warm skin "
+            "tones, bold accent colors for clothing. Face simplified to essential shapes — geometric eye forms, "
+            "simple nose shape. Hair rendered as bold flowing shapes with clean silhouette edges. "
+            "Background: solid pastel mint green. Composition: centered portrait from shoulders up. Aspect ratio 1:1. "
+            "The overall style is a premium flat vector illustration portrait suitable for a modern tech profile "
+            "avatar. No outlines, no texture, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A18": {
+        "name": "Anime / 二次元",
+        "prompt": (
+            "Transform the uploaded photo into a beautiful anime/二次元 character portrait in the style of a modern "
+            "high-budget anime series like Violet Evergarden or Makoto Shinkai's films. Preserve the subject's "
+            "facial identity — face shape, eye characteristics, hairstyle. Large, detailed anime eyes with multiple "
+            "layers of color, light reflections, and subtle gradient irises with star-shaped catch-lights. "
+            "Smooth, luminous skin with anime-style shading. Hair: flowing, dynamic strands with rich color depth "
+            "and individual highlight streaks. Expression: gentle smile with warm eyes. "
+            "Background: dreamy golden hour scene with cherry blossom petals drifting through warm sunlight, "
+            "soft bokeh of city lights. Warm golden back-lighting creating a glowing halo around the hair. "
+            "Composition: three-quarter portrait. Aspect ratio 3:4. "
+            "The overall style is a breathtaking anime character portrait worthy of a light novel cover. "
+            "No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A19": {
+        "name": "Wool Felt / Needle Felt",
+        "prompt": (
+            "Transform the uploaded photo into an adorable needle-felted wool character. Preserve key facial features "
+            "and hairstyle while rendering as if hand-crafted from soft merino wool roving. Surface shows the "
+            "characteristic fuzzy texture of hand-poked needle felting — tiny fiber ends poking out, gentle dimples, "
+            "soft matte finish. Round simplified face with tiny black bead eyes with sparkle reflection, small pink "
+            "needle-felted nose, rosy felt circles for cheeks. Hair sculpted from matching-color wool in soft thick "
+            "tufts. Outfit: miniature knitted scarf and wool sweater. Scene: placed on a rustic wooden surface with "
+            "tiny felted flowers, warm natural daylight. Macro product photography style, shallow depth of field. "
+            "Composition: centered character. Aspect ratio 1:1. "
+            "The overall style is a premium handmade needle-felted wool art portrait with heartwarming craft "
+            "authenticity. No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A20": {
+        "name": "Colored Pencil Drawing",
+        "prompt": (
+            "Transform the uploaded photo into a stunning colored pencil portrait on heavyweight Bristol board. "
+            "Preserve the subject's complete facial identity with precise detail. Premium wax-based colored pencils "
+            "(Prismacolor style). Multiple layers built from light to dark — visible directional strokes following "
+            "face contours, burnished smooth areas on skin highlights, looser hatching in shadows. "
+            "Skin from layered warm tones: peach, light carmine, raw sienna, touches of cerulean for cool shadows. "
+            "Hair rendered with flowing directional strokes, individual strand groupings visible. Eyes are the most "
+            "detailed area — precise iris patterns, bright white paper for catch-lights. Background: soft color "
+            "washes fading to bare paper. Paper texture visible throughout. Composition: head-and-shoulders. "
+            "Aspect ratio 1:1. "
+            "The overall style is a gallery-quality colored pencil portrait with exceptional technique. "
+            "No digital effects, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A21": {
+        "name": "Pop Art",
+        "prompt": (
+            "Transform the uploaded photo into a bold Pop Art portrait in the style of Andy Warhol's iconic "
+            "silkscreen prints. Preserve the subject's facial identity while applying dramatic Pop Art treatment. "
+            "The image is divided into a 2x2 grid of four identical portraits, each in a different striking color "
+            "scheme: Top-left: hot pink face, electric blue hair, canary yellow background. "
+            "Top-right: lime green face, orange hair, magenta background. Bottom-left: bright cyan face, red hair, "
+            "purple background. Bottom-right: golden yellow face, teal hair, coral background. "
+            "Screen-printed aesthetic with flat color fills, slightly offset registration. Bold black outlines on "
+            "facial features. Halftone dot pattern in mid-tones. High contrast, 3-4 tonal values per channel. "
+            "Composition: 2x2 grid, square format. Aspect ratio 1:1. "
+            "The overall style is an authentic Warhol-inspired Pop Art silkscreen. No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A22": {
+        "name": "Miniature / Diorama",
+        "prompt": (
+            "Transform the uploaded photo subject into a hyper-detailed miniature diorama scene. The subject "
+            "becomes a 1/6 scale collectible figurine placed inside a meticulously crafted tabletop miniature "
+            "world. Figurine: realistic hand-painted figure preserving facial features and outfit. Diorama: "
+            "a cozy miniature coffee shop interior — tiny tables with real-looking wooden grain, miniature coffee "
+            "cups, tiny potted plants with individually sculpted leaves, warm Edison bulb string lights, checkered "
+            "tile floor. Craft materials visible: balsa wood structures, hand-painted plaster walls, real moss "
+            "for greenery. Photography: extreme macro lens at f/4, natural miniature depth of field, warm "
+            "directional lighting simulating golden hour through a tiny window. "
+            "Composition: eye-level view into the diorama. Aspect ratio 1:1. "
+            "The overall style is a professionally photographed miniature diorama sparking wonder at tiny-world "
+            "detail. No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "A23": {
+        "name": "Children's Drawing",
+        "prompt": (
+            "Transform the uploaded photo into an endearing children's drawing, as if drawn by a creative "
+            "6-year-old child with thick wax crayons and colorful markers on white construction paper. "
+            "The subject has a large round head (1/3 of body), simple circle eyes with dot pupils, wide U-shaped "
+            "smile, stick-like arms and legs with mitten hands. Hair color and clothing colors reference the "
+            "original photo. Bold, fully saturated crayon colors pressed hard for maximum vibrancy, slightly going "
+            "outside the lines. Scene: character standing on green grass strip at bottom, bright yellow sun with "
+            "radiating lines in upper corner, V-shaped birds in blue sky, simple house in background. "
+            "Uneven line pressure, slight wobbliness to all lines, paper texture beneath the crayon. "
+            "Composition: centered character. Aspect ratio 1:1. "
+            "The overall style is a genuine, heartwarming children's artwork. Embrace beautiful imperfection."
+        ),
+        "ref": SELFIE,
+    },
+    "B06": {
+        "name": "Film / Cinematic Portrait",
+        "prompt": (
+            "Transform the uploaded photo into a cinematic film portrait that looks like a still frame from a "
+            "Wong Kar-wai arthouse film. Preserve the subject's complete facial identity and expression. "
+            "Film stock: Kodak Vision3 500T tungsten — warm-to-cool color crossover, pronounced elegant grain, "
+            "slightly lifted blacks with subtle cyan cast in shadows, warm golden skin tones. "
+            "The subject gazes slightly off-camera with a contemplative expression. "
+            "Environment: dimly lit urban setting at night — neon signs reflecting off rain-wet surfaces, warm glow "
+            "of a nearby streetlamp mixing with cool blue ambient. Subject near a window creating natural framing. "
+            "Lighting: neon red-orange glow on one side, cool blue ambient on the other. No fill light. "
+            "Camera: 35mm anamorphic lens wide open at T1.4, beautiful oval bokeh of city lights. "
+            "Aspect ratio 3:4. Cinematic negative space — subject occupies one-third of frame. "
+            "The overall style is a hauntingly beautiful cinematic portrait with arthouse film depth. "
+            "No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "B07": {
+        "name": "Dreamy / Hazy Portrait",
+        "prompt": (
+            "Transform the uploaded photo into an ethereal, dreamlike portrait with a soft, hazy quality. "
+            "Preserve the subject's facial identity while wrapping them in romantic, otherworldly atmosphere. "
+            "Shot through vintage soft-focus glass — luminous bloom-like glow where highlights spread softly. "
+            "Face gently softened but clearly identifiable — eyes remain sharpest element. Skin has luminous, "
+            "almost translucent quality with warm inner glow. Hair catches and scatters light — golden halo effect. "
+            "Environment: soft diffused golden light, sunlit meadow at magical golden hour. Light particles and "
+            "dust motes float in warm air. Intense warm backlight creating full-body glow. "
+            "Color palette: warm golden tones — honey, amber, soft peach. No pure blacks, everything bathed in light. "
+            "Camera: vintage 85mm lens (Helios 44-2) wide open at f/1.5, distinctive swirly bokeh. "
+            "Composition: intimate head-and-shoulders. Aspect ratio 3:4. "
+            "The overall style is an impossibly romantic and ethereal portrait like a beautiful memory or dream. "
+            "No text, no watermark."
+        ),
+        "ref": SELFIE,
+    },
+    "C04": {
+        "name": "Pet Costume Play / Mugshot",
+        "prompt": (
+            "Transform the uploaded pet photo into a hilarious police mugshot scene. Preserve the pet's exact breed, "
+            "fur color/pattern, and facial features. The pet stands facing the camera in front of a height-measurement "
+            "wall chart. They hold a booking placard/nameplate with 'THE SUSPECT' and a case number. The pet has a "
+            "perfectly guilty expression — slightly shifty eyes, ears back. They wear an orange prison jumpsuit collar. "
+            "The mugshot board shows measurements in cm and inches. Harsh overhead fluorescent lighting casts "
+            "unflattering shadows, like a real police station photograph. The pet retains natural animal proportions "
+            "— NOT humanoid. The costume and props are humorously fitted onto the actual animal body. "
+            "Style: photorealistic with comedic staging. Composition: centered, front-facing. Aspect ratio 1:1. "
+            "The overall style is a viral-worthy comedic pet photo that makes everyone laugh. "
+            "No text except in-scene props."
+        ),
+        "ref": PET,
+    },
+    "E06": {
+        "name": "YouTube Thumbnail",
+        "prompt": (
+            "Create a high-impact YouTube video thumbnail for a video about 'TOP 10 AI TOOLS IN 2026'. "
+            "Layout: a person with dramatically exaggerated surprised expression on the left 60%, a glowing AI "
+            "robot hologram on the right side. Main text: 'TOP 10 AI TOOLS' in ultra-bold white Impact font with "
+            "thick black outline and neon cyan drop shadow, angled slightly. Smaller text: '2026 Edition' in clean "
+            "white. Background: vibrant gradient from deep blue to purple with tech circuit patterns. "
+            "Color saturation cranked to maximum — needs to pop at tiny sizes. Extreme contrast. "
+            "Faces clear and expressive, readable emotion. Everything bold, big, graphic. "
+            "Composition: landscape, tightly packed. Aspect ratio 16:9. "
+            "The overall style is a professional, high-CTR YouTube thumbnail optimized for click-through. "
+            "All text perfectly spelled."
+        ),
+        "ref": None,
+    },
+    "E07": {
+        "name": "Educational Visual / Infographic",
+        "prompt": (
+            "Create a visually engaging educational infographic on 'How Photosynthesis Works'. "
+            "Layout: clean structured infographic — title at top, main diagram center, supporting facts around edges. "
+            "Title: 'How Photosynthesis Works' in bold, large, friendly dark blue sans-serif font. "
+            "Main visual: a beautifully illustrated diagram showing the photosynthesis process — a stylized "
+            "cross-section of a leaf with labeled parts: sunlight arrows from above, water arrows from below, "
+            "CO2 entering, O2 releasing. Each element uses a different color for clarity. "
+            "3-4 key fact boxes with icons and short text. Color-coded arrows showing flow. "
+            "Style: modern, clean educational illustration with consistent palette of teal, leaf green, sunlight "
+            "yellow, sky blue. Background: clean white. Typography: perfectly legible sans-serif. "
+            "Composition: portrait infographic. Aspect ratio 3:4. "
+            "The overall style is a premium educational infographic worthy of a classroom wall poster. "
+            "All text spelled correctly."
+        ),
+        "ref": None,
+    },
+    "E08": {
+        "name": "Picture Book / Storybook",
+        "prompt": (
+            "Create a stunning picture book illustration: a small fox wearing a red scarf discovers a hidden "
+            "door in an ancient oak tree. The door glows with warm golden light, and tiny fireflies float around "
+            "the entrance. The fox looks up with wonder, one paw reaching toward the door handle. "
+            "Art style: classic children's book illustration — soft watercolor and gouache on textured paper. "
+            "Warm, inviting colors. Influenced by Beatrix Potter meets Studio Ghibli. "
+            "Environment: enchanted forest at twilight — tall gnarled trees, dappled moonlight, glowing mushrooms "
+            "on mossy logs, ferns and wildflowers. Lighting: warm golden glow from the tree door as main source, "
+            "cool blue-purple twilight ambient, tiny firefly points of light. "
+            "Color palette: deep greens, warm browns, mossy golds, cool blues and purples for sky. "
+            "Composition: wide establishing shot, character in lower-left third looking toward glowing door on right. "
+            "Aspect ratio 16:9. "
+            "The overall style is a breathtaking picture book double-page spread. No text, no watermark."
+        ),
+        "ref": None,
+    },
+    "F07": {
+        "name": "Game Asset / Character Design",
+        "prompt": (
+            "Create a professional game character design sheet for a fantasy RPG battle mage. "
+            "The character wears enchanted dark steel armor with glowing blue runic engravings, deep indigo "
+            "sorcerer robes with golden thread patterns that pulse with magical energy, and a hooded cloak "
+            "tattered from battles. Layout: professional concept sheet — CENTER: full-body front-facing action "
+            "stance (largest). LEFT: three-quarter dynamic action pose. RIGHT: back view showing cloak and weapon. "
+            "CORNERS: close-up details of weapon, armor ornament, magical effects, face. "
+            "Art style: AAA game concept art — semi-realistic digital painting with clean rendering and strong "
+            "silhouette. Color palette: dark steel gray, deep indigo, glowing cyan-blue magic, gold ornaments. "
+            "Background: neutral gray gradient. Include design notes and scale reference. "
+            "Composition: character sheet layout. Aspect ratio 1:1. "
+            "The overall style is a professional AAA game studio character concept sheet. No watermark."
+        ),
+        "ref": None,
+    },
+    "F08": {
+        "name": "Product Marketing Design",
+        "prompt": (
+            "Create a premium product marketing visual for a new wireless headphone launch. "
+            "Product: sleek noise-canceling headphone in matte black with brushed copper accents, the 'AURA Pro Max'. "
+            "The headphone floats at a dramatic three-quarter angle against a rich dark gradient background. "
+            "Volumetric light beams in warm copper tones slice through subtle atmospheric haze. Matte surfaces "
+            "absorb softly, copper accents reflect with precision. Text: 'AURA Pro Max' in large ultra-modern "
+            "geometric sans-serif white font, tracking wide. Tagline: 'Silence. Reimagined.' in elegant copper. "
+            "CTA: 'Pre-order Now' in clean white. Abstract sound wave visualizations in translucent copper light "
+            "float around the product. Color palette: near-black to dark charcoal, brushed copper, white text. "
+            "Typography: geometric sans-serif, strong hierarchy. "
+            "Composition: vertical ad format. Aspect ratio 9:16. "
+            "The overall style is a premium brand campaign visual worthy of an Apple product launch. "
+            "All text perfectly spelled."
+        ),
+        "ref": None,
+    },
+}
+
+
+async def run_all():
+    meta_path = META_FILE
+    existing_meta = {}
+    if meta_path.exists():
+        with open(meta_path) as f:
+            existing_meta = json.load(f)
+
+    for tid, tpl in NEW_TEMPLATES.items():
+        out_dir = RESULTS_DIR / tid
+        out_dir.mkdir(parents=True, exist_ok=True)
+        out_path = str(out_dir / "run_1.png")
+
+        if os.path.exists(out_path):
+            print(f"[{tid}] Already exists, skipping")
+            continue
+
+        print(f"\n{'='*60}")
+        print(f"[{tid}] {tpl['name']}")
+        print(f"Prompt: {tpl['prompt'][:120]}...")
+        if tpl.get("ref"):
+            print(f"Reference: {tpl['ref']}")
+
+        result = await generate_image(
+            prompt=tpl["prompt"],
+            output_path=out_path,
+            reference_image=tpl.get("ref"),
+        )
+
+        meta_entry = {
+            "template_id": tid,
+            "template_name": tpl["name"],
+            "prompt": tpl["prompt"],
+            "reference_image": tpl.get("ref"),
+            "output": out_path if result["success"] else None,
+            "success": result["success"],
+            "error": result.get("error"),
+            "timestamp": datetime.now().isoformat(),
+        }
+
+        existing_meta[tid] = meta_entry
+        with open(meta_path, "w") as f:
+            json.dump(existing_meta, f, indent=2, ensure_ascii=False)
+
+        status = "OK" if result["success"] else f"FAILED: {result.get('error')}"
+        print(f"Result: {status}")
+
+        if result["success"]:
+            await asyncio.sleep(2)
+
+    print(f"\n{'='*60}")
+    print(f"Done! Results in: {RESULTS_DIR}")
+    successes = sum(1 for t in NEW_TEMPLATES if (RESULTS_DIR / t / "run_1.png").exists())
+    print(f"Success: {successes}/{len(NEW_TEMPLATES)}")
+
+
+if __name__ == "__main__":
+    asyncio.run(run_all())

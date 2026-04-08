@@ -215,6 +215,108 @@
     "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
     "notes": "Perfect coloring book page — clean black lines on white, enclosed areas, intricate details, fairy/mushroom/cottage scene exactly as described"
   },
+  "A15": {
+    "template_name": "Oil Painting / Classical",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Stunning Rembrandt-quality portrait — visible impasto brushwork, dramatic chiaroscuro lighting, canvas weave texture, velvet garment with rich fabric folds, identity perfectly preserved"
+  },
+  "A16": {
+    "template_name": "Pixel Art",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.8},
+    "notes": "Authentic 16-bit pixel art with clear dithering patterns, limited palette, RPG portrait framing. Glasses and hairstyle preserved. Clean pixel borders."
+  },
+  "A17": {
+    "template_name": "Flat / Vector Illustration",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfect flat design execution — zero gradients, crisp geometric shapes, harmonious 6-color palette, identity clearly recognizable through simplified forms"
+  },
+  "A18": {
+    "template_name": "Anime / 二次元",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Breathtaking Shinkai-level anime — multi-layer eye reflections with star catch-lights, cherry blossom atmosphere, golden backlighting creating hair halo, identity preserved through glasses and face shape"
+  },
+  "A19": {
+    "template_name": "Wool Felt / Needle Felt",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Incredible needle-felt authenticity — visible wool fiber wisps, tiny felted flowers, bead eyes, rosy cheeks, knitted sweater detail, macro photography depth of field. Identity preserved through glasses and hairstyle"
+  },
+  "A20": {
+    "template_name": "Colored Pencil Drawing",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.9},
+    "notes": "Gallery-quality colored pencil — visible directional strokes, layered warm skin tones, paper texture showing through, precise eye detail with catch-lights"
+  },
+  "A21": {
+    "template_name": "Pop Art",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfect Warhol execution — 2x2 grid with four distinct color schemes, halftone dot pattern visible, bold black outlines, consistent identity across all quadrants, slight registration offset for authenticity"
+  },
+  "A22": {
+    "template_name": "Miniature / Diorama",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Stunning miniature world — coffee shop with checkered tile, Edison bulbs, tiny plants, balsa wood furniture. Macro depth of field perfectly sells the miniature scale. Identity preserved in figurine"
+  },
+  "A23": {
+    "template_name": "Children's Drawing",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfectly captures genuine child art — wobbly lines, crayon pressed hard, simple house and sun, V-shaped birds. Glasses and sweater from original photo referenced. Paper texture visible."
+  },
+  "B06": {
+    "template_name": "Film / Cinematic Portrait",
+    "category": "B",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Gorgeous Wong Kar-wai aesthetic — neon red-orange glow, rain-wet surfaces, cool blue ambient, window reflection, film grain, anamorphic bokeh, contemplative mood. Identity strong."
+  },
+  "B07": {
+    "template_name": "Dreamy / Hazy Portrait",
+    "category": "B",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.8},
+    "notes": "Beautiful golden hour backlight with hair halo, floating dust particles, soft warm glow. Could be slightly hazier/dreamier but still achieves the ethereal romantic quality. Identity clearly preserved."
+  },
+  "C04": {
+    "template_name": "Pet Costume Play / Mugshot",
+    "category": "C",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Hilarious and perfectly executed — height measurement chart, 'THE SUSPECT' nameplate, orange PRISONER collar, guilty expression, harsh fluorescent lighting. Pet identity perfectly preserved. Viral-worthy."
+  },
+  "E06": {
+    "template_name": "YouTube Thumbnail",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Professional high-CTR thumbnail — 'TOP 10 AI TOOLS' perfectly rendered in bold Impact font, exaggerated surprised expression, AI robot hologram, vibrant blue-purple gradient, text readable at small sizes"
+  },
+  "E07": {
+    "template_name": "Educational Visual / Infographic",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Outstanding educational infographic — detailed leaf cross-section diagram, labeled parts (Epidermis, Palisade Mesophyll, Vascular Bundle, Stoma), color-coded arrows, fact boxes. All text legible and scientifically accurate."
+  },
+  "E08": {
+    "template_name": "Picture Book / Storybook",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Magical picture book spread — fox with red scarf, glowing oak tree door, fireflies, enchanted forest with mushrooms and moonlight. Watercolor-gouache texture on paper. Beatrix Potter × Ghibli aesthetic achieved."
+  },
+  "F07": {
+    "template_name": "Game Asset / Character Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Professional AAA concept sheet — front/left/right/back views, glowing cyan runes, design notes with material callouts, color palette swatches, scale reference. Labeled views (LEFT/CENTER/RIGHT/CORNERS). Publication-ready."
+  },
+  "F08": {
+    "template_name": "Product Marketing Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Apple-level product ad — 'AURA Pro Max' perfectly rendered, 'Silence. Reimagined.' tagline in copper, 'Pre-order Now' CTA, floating headphone with copper accents, volumetric light beams, sound wave visualizations. Premium brand quality."
+  },
   "_meta": {
     "model": "gemini-3.1-flash-image-preview",
     "evaluator": "automated + visual quality assessment",

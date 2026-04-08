@@ -210,6 +210,141 @@
     "has_sample": true
   },
   {
+    "id": "A15",
+    "name": "Oil Painting / Classical",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "oil painting, 油画, classical",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A16",
+    "name": "Pixel Art",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "pixel art, 像素, 8-bit",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.8
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A17",
+    "name": "Flat / Vector Illustration",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "flat, vector, 平面插画",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A18",
+    "name": "Anime / 二次元",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "anime, 二次元, 动漫",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A19",
+    "name": "Wool Felt / Needle Felt",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "wool felt, 羊毛毡, felted",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A20",
+    "name": "Colored Pencil",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "colored pencil, 彩铅, crayon",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A21",
+    "name": "Pop Art",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "pop art, 波普, Warhol",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A22",
+    "name": "Miniature / Diorama",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "miniature, 微缩景观, diorama",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A23",
+    "name": "Children's Drawing",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "children drawing, 儿童画",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
     "id": "B01",
     "name": "Studio Photoshoot",
     "category": "Portrait",
@@ -285,6 +420,36 @@
     "has_sample": true
   },
   {
+    "id": "B06",
+    "name": "Film / Cinematic Portrait",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "film, 电影写真, cinematic",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B07",
+    "name": "Dreamy / Hazy Portrait",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "dreamy, 朦胧, hazy",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.8
+    },
+    "has_sample": true
+  },
+  {
     "id": "C01",
     "name": "Pet Stylization",
     "category": "Pets & Babies",
@@ -320,6 +485,21 @@
     "category": "Pets & Babies",
     "priority": "P0",
     "keywords": "pet magazine, VOGUE",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "C04",
+    "name": "Pet Costume Play",
+    "category": "Pets & Babies",
+    "priority": "P0",
+    "keywords": "pet costume, 宠物入狱, mugshot",
     "scores": {
       "prompt_adherence": 5.0,
       "identity_preservation": 5.0,
@@ -450,6 +630,51 @@
     "has_sample": true
   },
   {
+    "id": "E06",
+    "name": "YouTube Thumbnail",
+    "category": "Creative",
+    "priority": "P2",
+    "keywords": "YouTube, thumbnail, 缩略图",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E07",
+    "name": "Educational Visual",
+    "category": "Creative",
+    "priority": "P2",
+    "keywords": "educational, infographic, 教育",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E08",
+    "name": "Picture Book Illustration",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "picture book, 绘本, storybook",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
     "id": "F01",
     "name": "E-commerce Main Image",
     "category": "Design",
@@ -530,6 +755,36 @@
     "category": "Design",
     "priority": "P1",
     "keywords": "coloring, 涂色, line art",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F07",
+    "name": "Game Asset Design",
+    "category": "Design",
+    "priority": "P2",
+    "keywords": "game, 游戏, character design",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F08",
+    "name": "Product Marketing Design",
+    "category": "Design",
+    "priority": "P2",
+    "keywords": "marketing, 营销, ad campaign",
     "scores": {
       "prompt_adherence": 5.0,
       "identity_preservation": 5.0,
