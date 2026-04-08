@@ -835,7 +835,7 @@ def interactive_scoring():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Template Evaluation Runner")
-    parser.add_argument("--category", choices=["A", "B", "C", "D", "E", "F"],
+    parser.add_argument("--category", choices=["L", "M", "P"],
                         help="Run only templates in this category")
     parser.add_argument("--template", help="Run a single template by ID (e.g., A01)")
     parser.add_argument("--runs", type=int, default=2, help="Number of runs per template")

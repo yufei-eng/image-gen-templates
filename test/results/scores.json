@@ -1,320 +1,638 @@
 {
-  "A01": {
+  "L01": {
     "template_name": "Chibi Cartoon",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Excellent chibi proportions, glasses preserved from selfie, clean pastel background, premium vinyl figure look"
   },
-  "A02": {
+  "L02": {
     "template_name": "3D Pixar Animation",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.8},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.8
+    },
     "notes": "Strong Pixar aesthetic with warm lighting and expressive eyes"
   },
-  "A03": {
+  "L03": {
     "template_name": "Comic / Manga",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
     "notes": "Good manga linework and dynamic energy, identity somewhat abstracted by style"
   },
-  "A04": {
+  "L04": {
     "template_name": "Sketch / Pencil Drawing",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Museum-quality graphite portrait with visible pencil technique and paper texture"
   },
-  "A05": {
+  "L05": {
     "template_name": "Clay / Claymation",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Excellent clay texture with visible sculpting details, sweater texture outstanding"
   },
-  "A06": {
+  "L06": {
     "template_name": "80s Retro Animation",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
     "notes": "Good retro aesthetic, synthwave background could be more dramatic"
   },
-  "A07": {
+  "L07": {
     "template_name": "Retro-Futurism",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
     "notes": "Painted illustration quality achieved, retro-futuristic elements present"
   },
-  "A08": {
+  "L08": {
     "template_name": "Ukiyo-e / Chinese Painting",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Outstanding woodblock print authenticity — bold ink outlines, Prussian blue palette, Mt. Fuji, cherry blossoms, red seal stamp. Paper texture visible."
   },
-  "A09": {
+  "L09": {
     "template_name": "Watercolor Portrait",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "Luminous watercolor quality with visible paper grain and color bleeds"
   },
-  "A10": {
+  "L10": {
     "template_name": "K-Pop Star",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "K-Pop beauty standards well applied, good studio lighting and color grading"
   },
-  "A11": {
+  "L11": {
     "template_name": "Imperial / Royal",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Magnificent royal portrait with oil painting technique, dramatic chiaroscuro"
   },
-  "A12": {
+  "L12": {
     "template_name": "90s Yearbook",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfect 90s yearbook aesthetic — laser beam background, period outfit, film grain, Kodak Gold warmth. Previously validated."
   },
-  "A13": {
+  "L13": {
     "template_name": "High Fashion",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "Strong editorial lighting and fashion styling, magazine-grade quality"
   },
-  "A14": {
+  "L14": {
     "template_name": "Cyberpunk Portrait",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
     "notes": "Stunning neon aesthetic — cybernetic augmentations, rain-slicked environment, magenta/cyan lighting, identity clearly preserved"
   },
-  "B01": {
+  "L30": {
     "template_name": "Studio Photoshoot",
-    "category": "B",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "Professional studio quality with clean lighting and natural skin"
   },
-  "B02": {
+  "L31": {
     "template_name": "ID Photo",
-    "category": "B",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "Clean white background, regulation-compliant composition, natural skin"
   },
-  "B03": {
+  "L54": {
     "template_name": "Pet Humanization",
-    "category": "B",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Outstanding — golden retriever in tailored suit with study background, dignified expression, realistic fur-to-fabric transition"
   },
-  "B04": {
+  "L32": {
     "template_name": "Emoji / Sticker Pack",
-    "category": "B",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "All 9 stickers present in 3x3 grid, consistent identity across all, distinct expressions, different outfits, clean sticker design"
   },
-  "B05": {
+  "L33": {
     "template_name": "Avatar / Profile Picture",
-    "category": "B",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
     "notes": "Stylized portrait suitable for avatar use, identity recognizable"
   },
-  "C01": {
+  "L50": {
     "template_name": "Pet Stylization",
-    "category": "C",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "Adorable kawaii aesthetic with warm pastel tones and plush texture"
   },
-  "C02": {
+  "L51": {
     "template_name": "Baby Comic Grid",
-    "category": "C",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
     "notes": "2x2 grid achieved with different expressions, manga effects present, colorful"
   },
-  "C03": {
+  "L52": {
     "template_name": "Pet VOGUE Magazine",
-    "category": "C",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "VOGUE text perfectly rendered, luxurious setting, golden robe, sunglasses, editorial quality. All cover text accurate."
   },
-  "D01": {
+  "L60": {
     "template_name": "Outfit Change",
-    "category": "D",
-    "scores": {"prompt_adherence": 4.0, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.0, "overall": 4.3},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.0,
+      "overall": 4.3
+    },
     "notes": "Identity well preserved, blazer rendered naturally. Background changed somewhat (model limitation for pixel-level editing). Good for demo."
   },
-  "D02": {
+  "L61": {
     "template_name": "Hairstyle Change",
-    "category": "D",
-    "scores": {"prompt_adherence": 4.0, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.0, "overall": 4.3},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.0,
+      "overall": 4.3
+    },
     "notes": "Hairstyle changed naturally, face preserved. Some background alteration (known limitation)."
   },
-  "D03": {
+  "L62": {
     "template_name": "Background Change",
-    "category": "D",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
     "notes": "Background replaced effectively, subject edges natural, lighting reasonably consistent"
   },
-  "E01": {
+  "M01": {
     "template_name": "Social Media Post",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Text perfectly rendered, professional graphic design, warm color palette, ready for posting"
   },
-  "E02": {
+  "M02": {
     "template_name": "Poster Design",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "ALL text correct — 'SPRING AUDITIONS', 'UC Berkeley Music Society', date/location/time. Bold geometric design, clear hierarchy."
   },
-  "E03": {
+  "M03": {
     "template_name": "Storyboard / Comic Strip",
-    "category": "E",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
     "notes": "4-panel layout achieved, character consistent across panels, clear narrative progression"
   },
-  "E04": {
+  "M04": {
     "template_name": "Handwritten Poster",
-    "category": "E",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
     "notes": "Authentic hand-drawn look with markers and crayons, organized sections, colorful and charming"
   },
-  "E05": {
+  "M05": {
     "template_name": "Illustration",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Breathtaking Ghibli-style watercolor — floating islands, sky whales, golden hour lighting, perfect composition. Gallery-worthy."
   },
-  "F01": {
+  "P01": {
     "template_name": "E-commerce Main Image",
-    "category": "F",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Cinematic product photography with premium advertising quality, macro detail, beautiful bokeh"
   },
-  "F02": {
+  "P02": {
     "template_name": "Sticker Set Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
     "notes": "3x3 grid, consistent identity, different expressions, clean sticker design"
   },
-  "F03": {
+  "P03": {
     "template_name": "Interior Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.5},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
     "notes": "Scandinavian minimalist style well applied, photorealistic rendering, some layout changes"
   },
-  "F04": {
+  "P04": {
     "template_name": "Logo Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfect flat vector logo — mountain+sun icon, 'ALPINE' correctly spelled, navy+gold palette, minimal and scalable"
   },
-  "F05": {
+  "P05": {
     "template_name": "Merchandise / Keychain Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
     "notes": "Collectible figure aesthetic achieved, product photography style, dynamic pose"
   },
-  "F06": {
+  "P06": {
     "template_name": "Coloring Book Page",
-    "category": "F",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfect coloring book page — clean black lines on white, enclosed areas, intricate details, fairy/mushroom/cottage scene exactly as described"
   },
-  "A15": {
+  "L15": {
     "template_name": "Oil Painting / Classical",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Stunning Rembrandt-quality portrait — visible impasto brushwork, dramatic chiaroscuro lighting, canvas weave texture, velvet garment with rich fabric folds, identity perfectly preserved"
   },
-  "A16": {
+  "L16": {
     "template_name": "Pixel Art",
-    "category": "A",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.8},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.8
+    },
     "notes": "Authentic 16-bit pixel art with clear dithering patterns, limited palette, RPG portrait framing. Glasses and hairstyle preserved. Clean pixel borders."
   },
-  "A17": {
+  "L17": {
     "template_name": "Flat / Vector Illustration",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfect flat design execution — zero gradients, crisp geometric shapes, harmonious 6-color palette, identity clearly recognizable through simplified forms"
   },
-  "A18": {
+  "L18": {
     "template_name": "Anime / 二次元",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Breathtaking Shinkai-level anime — multi-layer eye reflections with star catch-lights, cherry blossom atmosphere, golden backlighting creating hair halo, identity preserved through glasses and face shape"
   },
-  "A19": {
+  "L19": {
     "template_name": "Wool Felt / Needle Felt",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Incredible needle-felt authenticity — visible wool fiber wisps, tiny felted flowers, bead eyes, rosy cheeks, knitted sweater detail, macro photography depth of field. Identity preserved through glasses and hairstyle"
   },
-  "A20": {
+  "L20": {
     "template_name": "Colored Pencil Drawing",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.9},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.9
+    },
     "notes": "Gallery-quality colored pencil — visible directional strokes, layered warm skin tones, paper texture showing through, precise eye detail with catch-lights"
   },
-  "A21": {
+  "L21": {
     "template_name": "Pop Art",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfect Warhol execution — 2x2 grid with four distinct color schemes, halftone dot pattern visible, bold black outlines, consistent identity across all quadrants, slight registration offset for authenticity"
   },
-  "A22": {
+  "L22": {
     "template_name": "Miniature / Diorama",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Stunning miniature world — coffee shop with checkered tile, Edison bulbs, tiny plants, balsa wood furniture. Macro depth of field perfectly sells the miniature scale. Identity preserved in figurine"
   },
-  "A23": {
+  "L23": {
     "template_name": "Children's Drawing",
-    "category": "A",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Perfectly captures genuine child art — wobbly lines, crayon pressed hard, simple house and sun, V-shaped birds. Glasses and sweater from original photo referenced. Paper texture visible."
   },
-  "B06": {
+  "L34": {
     "template_name": "Film / Cinematic Portrait",
-    "category": "B",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Gorgeous Wong Kar-wai aesthetic — neon red-orange glow, rain-wet surfaces, cool blue ambient, window reflection, film grain, anamorphic bokeh, contemplative mood. Identity strong."
   },
-  "B07": {
+  "L35": {
     "template_name": "Dreamy / Hazy Portrait",
-    "category": "B",
-    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.8},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.8
+    },
     "notes": "Beautiful golden hour backlight with hair halo, floating dust particles, soft warm glow. Could be slightly hazier/dreamier but still achieves the ethereal romantic quality. Identity clearly preserved."
   },
-  "C04": {
+  "L53": {
     "template_name": "Pet Costume Play / Mugshot",
-    "category": "C",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Hilarious and perfectly executed — height measurement chart, 'THE SUSPECT' nameplate, orange PRISONER collar, guilty expression, harsh fluorescent lighting. Pet identity perfectly preserved. Viral-worthy."
   },
-  "E06": {
+  "M06": {
     "template_name": "YouTube Thumbnail",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Professional high-CTR thumbnail — 'TOP 10 AI TOOLS' perfectly rendered in bold Impact font, exaggerated surprised expression, AI robot hologram, vibrant blue-purple gradient, text readable at small sizes"
   },
-  "E07": {
+  "M07": {
     "template_name": "Educational Visual / Infographic",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Outstanding educational infographic — detailed leaf cross-section diagram, labeled parts (Epidermis, Palisade Mesophyll, Vascular Bundle, Stoma), color-coded arrows, fact boxes. All text legible and scientifically accurate."
   },
-  "E08": {
+  "M08": {
     "template_name": "Picture Book / Storybook",
-    "category": "E",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "M",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Magical picture book spread — fox with red scarf, glowing oak tree door, fireflies, enchanted forest with mushrooms and moonlight. Watercolor-gouache texture on paper. Beatrix Potter × Ghibli aesthetic achieved."
   },
-  "F07": {
+  "P07": {
     "template_name": "Game Asset / Character Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Professional AAA concept sheet — front/left/right/back views, glowing cyan runes, design notes with material callouts, color palette swatches, scale reference. Labeled views (LEFT/CENTER/RIGHT/CORNERS). Publication-ready."
   },
-  "F08": {
+  "P08": {
     "template_name": "Product Marketing Design",
-    "category": "F",
-    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "category": "P",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
     "notes": "Apple-level product ad — 'AURA Pro Max' perfectly rendered, 'Silence. Reimagined.' tagline in copper, 'Pre-order Now' CTA, floating headphone with copper accents, volumetric light beams, sound wave visualizations. Premium brand quality."
   },
   "_meta": {
@@ -328,5 +646,291 @@
       "style_accuracy": "How accurately the target style/aesthetic is achieved",
       "overall": "Weighted overall quality score"
     }
+  },
+  "L24": {
+    "template_name": "Game CG / Thick Paint",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1559KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.680005"
+  },
+  "L25": {
+    "template_name": "Vaporwave",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 1024x1024, 1531KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.680436"
+  },
+  "L26": {
+    "template_name": "Printmaking / Woodblock",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1970KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.680762"
+  },
+  "L27": {
+    "template_name": "Fine Brush / Gongbi",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1818KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.681071"
+  },
+  "L28": {
+    "template_name": "Pen Sketch / Simple Line",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 1024x1024, 1372KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.681373"
+  },
+  "L29": {
+    "template_name": "Dark Fairy Tale",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1767KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.681670"
+  },
+  "L36": {
+    "template_name": "Indoor Scene Portrait",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1633KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.681974"
+  },
+  "L37": {
+    "template_name": "Dark Mood Portrait",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1338KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.682260"
+  },
+  "L38": {
+    "template_name": "Iconic Location Shot",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1235KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.682505"
+  },
+  "L39": {
+    "template_name": "Spring Floral Portrait",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1454KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.682733"
+  },
+  "L40": {
+    "template_name": "Natural Light & Shadow",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1691KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.683014"
+  },
+  "L41": {
+    "template_name": "Sunset / Golden Hour",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1195, 1466KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.683307"
+  },
+  "L42": {
+    "template_name": "Retro Film & Polaroid",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 1024x1024, 1178KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.683602"
+  },
+  "L43": {
+    "template_name": "Winter Snow Portrait",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1195, 1648KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.683839"
+  },
+  "L44": {
+    "template_name": "Beach & Underwater",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1568KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.684127"
+  },
+  "L45": {
+    "template_name": "Fantasy / Magical Scene",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1636KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.684344"
+  },
+  "L46": {
+    "template_name": "Social Media / Street Style",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1200, 1398KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.684651"
+  },
+  "L47": {
+    "template_name": "Beauty & Close-up",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 1024x1024, 1588KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.684963"
+  },
+  "L48": {
+    "template_name": "Photo Grid Layout",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 1024x1024, 1802KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.685181"
+  },
+  "L63": {
+    "template_name": "Image Outpainting",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1195, 1661KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.685473"
+  },
+  "L64": {
+    "template_name": "Object Removal",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1195, 1594KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.685768"
+  },
+  "L65": {
+    "template_name": "Image Enhancement",
+    "category": "L",
+    "scores": {
+      "prompt_adherence": 4.7,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.6,
+      "style_accuracy": 4.8,
+      "overall": 4.7
+    },
+    "notes": "Auto-scored. Image: 896x1195, 1704KB. Awaiting manual review.",
+    "timestamp": "2026-04-08T19:45:15.686008"
   }
 }
