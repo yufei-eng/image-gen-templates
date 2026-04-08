@@ -1,0 +1,326 @@
+{
+  "A01": [
+    {
+      "template_id": "A01",
+      "run_index": 1,
+      "output": "test/results/A01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:00:22.624074"
+    }
+  ],
+  "A02": [
+    {
+      "template_id": "A02",
+      "run_index": 1,
+      "output": "test/results/A02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:03:32.228715"
+    }
+  ],
+  "A03": [
+    {
+      "template_id": "A03",
+      "run_index": 1,
+      "output": "test/results/A03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:04:09.847174"
+    }
+  ],
+  "A04": [
+    {
+      "template_id": "A04",
+      "run_index": 1,
+      "output": "test/results/A04/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:04:52.057318"
+    }
+  ],
+  "A05": [
+    {
+      "template_id": "A05",
+      "run_index": 1,
+      "output": "test/results/A05/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:05:32.445378"
+    }
+  ],
+  "A06": [
+    {
+      "template_id": "A06",
+      "run_index": 1,
+      "output": "test/results/A06/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:06:14.716489"
+    }
+  ],
+  "A07": [
+    {
+      "template_id": "A07",
+      "run_index": 1,
+      "output": "test/results/A07/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:06:52.999044"
+    }
+  ],
+  "A08": [
+    {
+      "template_id": "A08",
+      "run_index": 1,
+      "output": "test/results/A08/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:07:31.855006"
+    }
+  ],
+  "A09": [
+    {
+      "template_id": "A09",
+      "run_index": 1,
+      "output": "test/results/A09/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:14:05.435817"
+    }
+  ],
+  "A10": [
+    {
+      "template_id": "A10",
+      "run_index": 1,
+      "output": "test/results/A10/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:08:36.000609"
+    }
+  ],
+  "A11": [
+    {
+      "template_id": "A11",
+      "run_index": 1,
+      "output": "test/results/A11/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:09:06.050125"
+    }
+  ],
+  "A12": [
+    {
+      "template_id": "A12",
+      "run_index": 1,
+      "output": "test/results/A12/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:09:32.201033"
+    }
+  ],
+  "A13": [
+    {
+      "template_id": "A13",
+      "run_index": 1,
+      "output": "test/results/A13/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:10:15.937962"
+    }
+  ],
+  "A14": [
+    {
+      "template_id": "A14",
+      "run_index": 1,
+      "output": "test/results/A14/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:10:47.605570"
+    }
+  ],
+  "B01": [
+    {
+      "template_id": "B01",
+      "run_index": 1,
+      "output": "test/results/B01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:11:21.593753"
+    }
+  ],
+  "B02": [
+    {
+      "template_id": "B02",
+      "run_index": 1,
+      "output": "test/results/B02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:12:29.484488"
+    }
+  ],
+  "B03": [
+    {
+      "template_id": "B03",
+      "run_index": 1,
+      "output": "test/results/B03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:17:18.580904"
+    }
+  ],
+  "B04": [
+    {
+      "template_id": "B04",
+      "run_index": 1,
+      "output": "test/results/B04/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:08:24.264085"
+    }
+  ],
+  "B05": [
+    {
+      "template_id": "B05",
+      "run_index": 1,
+      "output": "test/results/B05/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:08:55.075916"
+    }
+  ],
+  "C01": [
+    {
+      "template_id": "C01",
+      "run_index": 1,
+      "output": "test/results/C01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:18:08.349700"
+    }
+  ],
+  "C02": [
+    {
+      "template_id": "C02",
+      "run_index": 1,
+      "output": "test/results/C02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:19:11.448148"
+    }
+  ],
+  "C03": [
+    {
+      "template_id": "C03",
+      "run_index": 1,
+      "output": "test/results/C03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:19:53.546969"
+    }
+  ],
+  "D01": [
+    {
+      "template_id": "D01",
+      "run_index": 1,
+      "output": "test/results/D01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:09:36.653590"
+    }
+  ],
+  "D02": [
+    {
+      "template_id": "D02",
+      "run_index": 1,
+      "output": "test/results/D02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:14:54.636616"
+    }
+  ],
+  "D03": [
+    {
+      "template_id": "D03",
+      "run_index": 1,
+      "output": "test/results/D03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:12:24.897052"
+    }
+  ],
+  "E01": [
+    {
+      "template_id": "E01",
+      "run_index": 1,
+      "output": "test/results/E01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T11:59:42.066485"
+    }
+  ],
+  "E02": [
+    {
+      "template_id": "E02",
+      "run_index": 1,
+      "output": "test/results/E02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:00:22.568905"
+    }
+  ],
+  "E03": [
+    {
+      "template_id": "E03",
+      "run_index": 1,
+      "output": "test/results/E03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:03:52.691162"
+    }
+  ],
+  "E04": [
+    {
+      "template_id": "E04",
+      "run_index": 1,
+      "output": "test/results/E04/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:04:45.507914"
+    }
+  ],
+  "E05": [
+    {
+      "template_id": "E05",
+      "run_index": 1,
+      "output": "test/results/E05/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:05:34.684546"
+    }
+  ],
+  "F01": [
+    {
+      "template_id": "F01",
+      "run_index": 1,
+      "output": "test/results/F01/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:06:21.910418"
+    }
+  ],
+  "F02": [
+    {
+      "template_id": "F02",
+      "run_index": 1,
+      "output": "test/results/F02/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:13:02.439059"
+    }
+  ],
+  "F03": [
+    {
+      "template_id": "F03",
+      "run_index": 1,
+      "output": "test/results/F03/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:20:44.354790"
+    }
+  ],
+  "F04": [
+    {
+      "template_id": "F04",
+      "run_index": 1,
+      "output": "test/results/F04/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:00:23.090568"
+    }
+  ],
+  "F05": [
+    {
+      "template_id": "F05",
+      "run_index": 1,
+      "output": "test/results/F05/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:13:29.910986"
+    }
+  ],
+  "F06": [
+    {
+      "template_id": "F06",
+      "run_index": 1,
+      "output": "test/results/F06/run_1.png",
+      "success": true,
+      "timestamp": "2026-04-08T12:06:58.764860"
+    }
+  ]
+}

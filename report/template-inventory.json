@@ -1,0 +1,542 @@
+[
+  {
+    "id": "A01",
+    "name": "Chibi Cartoon",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "chibi, Q版, cartoon",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A02",
+    "name": "3D Pixar Animation",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "3D, Pixar, Disney",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.8
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A03",
+    "name": "Comic / Manga",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "comic, manga, 漫画",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A04",
+    "name": "Sketch / Pencil",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "sketch, 素描, pencil",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A05",
+    "name": "Clay / Claymation",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "clay, 黏土, stop-motion",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A06",
+    "name": "80s Retro Animation",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "80s, retro, synthwave",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A07",
+    "name": "Retro-Futurism",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "retro-future, space age",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A08",
+    "name": "Ukiyo-e / Chinese Painting",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "ukiyo-e, 国风, 古风",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A09",
+    "name": "Watercolor Portrait",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "watercolor, 水彩",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A10",
+    "name": "K-Pop Star",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "K-Pop, 韩风, idol",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A11",
+    "name": "Imperial / Royal",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "imperial, 帝王, royal",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A12",
+    "name": "90s Yearbook",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "90s, yearbook, 毕业照",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A13",
+    "name": "High Fashion",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "fashion, vogue, editorial",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "A14",
+    "name": "Cyberpunk Portrait",
+    "category": "Stylization",
+    "priority": "P0",
+    "keywords": "cyberpunk, neon, 赛博朋克",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 4.9
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B01",
+    "name": "Studio Photoshoot",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "photoshoot, 写真, studio",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B02",
+    "name": "ID Photo",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "ID photo, 证件照, passport",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B03",
+    "name": "Pet Humanization",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "pet human, 宠物拟人",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B04",
+    "name": "Emoji / Sticker Pack",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "emoji, sticker, 表情包",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "B05",
+    "name": "Avatar / Profile Picture",
+    "category": "Portrait",
+    "priority": "P0",
+    "keywords": "avatar, 头像, profile",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
+    "has_sample": true
+  },
+  {
+    "id": "C01",
+    "name": "Pet Stylization",
+    "category": "Pets & Babies",
+    "priority": "P0",
+    "keywords": "pet, 萌宠, kawaii",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "C02",
+    "name": "Baby Comic Grid",
+    "category": "Pets & Babies",
+    "priority": "P0",
+    "keywords": "baby, 宝宝, comic grid",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
+    "has_sample": true
+  },
+  {
+    "id": "C03",
+    "name": "Pet VOGUE Magazine",
+    "category": "Pets & Babies",
+    "priority": "P0",
+    "keywords": "pet magazine, VOGUE",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "D01",
+    "name": "Outfit Change",
+    "category": "Editing",
+    "priority": "P1",
+    "keywords": "outfit, 换装, try-on",
+    "scores": {
+      "prompt_adherence": 4.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.0,
+      "overall": 4.3
+    },
+    "has_sample": true
+  },
+  {
+    "id": "D02",
+    "name": "Hairstyle Change",
+    "category": "Editing",
+    "priority": "P1",
+    "keywords": "hairstyle, 发型, haircut",
+    "scores": {
+      "prompt_adherence": 4.0,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.0,
+      "overall": 4.3
+    },
+    "has_sample": true
+  },
+  {
+    "id": "D03",
+    "name": "Background Change",
+    "category": "Editing",
+    "priority": "P1",
+    "keywords": "background, 换背景",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E01",
+    "name": "Social Media Post",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "social media, quote, 配图",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E02",
+    "name": "Poster Design",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "poster, 海报, flyer",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E03",
+    "name": "Storyboard",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "storyboard, 分镜, comic strip",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E04",
+    "name": "Handwritten Poster",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "手抄报, bulletin",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 5.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
+    "has_sample": true
+  },
+  {
+    "id": "E05",
+    "name": "Illustration",
+    "category": "Creative",
+    "priority": "P1",
+    "keywords": "illustration, 插画",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F01",
+    "name": "E-commerce Main Image",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "e-commerce, 电商, product",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F02",
+    "name": "Sticker Set Design",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "sticker set, 贴纸集",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.5,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.6
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F03",
+    "name": "Interior Design",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "interior, 家装, room",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 4.5,
+      "overall": 4.5
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F04",
+    "name": "Logo Design",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "logo, 标志, brand",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F05",
+    "name": "Merchandise Design",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "merchandise, 手办, figure",
+    "scores": {
+      "prompt_adherence": 4.5,
+      "identity_preservation": 4.0,
+      "visual_quality": 4.5,
+      "style_accuracy": 4.5,
+      "overall": 4.4
+    },
+    "has_sample": true
+  },
+  {
+    "id": "F06",
+    "name": "Coloring Book Page",
+    "category": "Design",
+    "priority": "P1",
+    "keywords": "coloring, 涂色, line art",
+    "scores": {
+      "prompt_adherence": 5.0,
+      "identity_preservation": 5.0,
+      "visual_quality": 5.0,
+      "style_accuracy": 5.0,
+      "overall": 5.0
+    },
+    "has_sample": true
+  }
+]

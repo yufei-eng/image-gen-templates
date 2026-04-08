@@ -1,0 +1,230 @@
+{
+  "A01": {
+    "template_name": "Chibi Cartoon",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Excellent chibi proportions, glasses preserved from selfie, clean pastel background, premium vinyl figure look"
+  },
+  "A02": {
+    "template_name": "3D Pixar Animation",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.8},
+    "notes": "Strong Pixar aesthetic with warm lighting and expressive eyes"
+  },
+  "A03": {
+    "template_name": "Comic / Manga",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "notes": "Good manga linework and dynamic energy, identity somewhat abstracted by style"
+  },
+  "A04": {
+    "template_name": "Sketch / Pencil Drawing",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Museum-quality graphite portrait with visible pencil technique and paper texture"
+  },
+  "A05": {
+    "template_name": "Clay / Claymation",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Excellent clay texture with visible sculpting details, sweater texture outstanding"
+  },
+  "A06": {
+    "template_name": "80s Retro Animation",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "notes": "Good retro aesthetic, synthwave background could be more dramatic"
+  },
+  "A07": {
+    "template_name": "Retro-Futurism",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "notes": "Painted illustration quality achieved, retro-futuristic elements present"
+  },
+  "A08": {
+    "template_name": "Ukiyo-e / Chinese Painting",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Outstanding woodblock print authenticity — bold ink outlines, Prussian blue palette, Mt. Fuji, cherry blossoms, red seal stamp. Paper texture visible."
+  },
+  "A09": {
+    "template_name": "Watercolor Portrait",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "Luminous watercolor quality with visible paper grain and color bleeds"
+  },
+  "A10": {
+    "template_name": "K-Pop Star",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "K-Pop beauty standards well applied, good studio lighting and color grading"
+  },
+  "A11": {
+    "template_name": "Imperial / Royal",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Magnificent royal portrait with oil painting technique, dramatic chiaroscuro"
+  },
+  "A12": {
+    "template_name": "90s Yearbook",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfect 90s yearbook aesthetic — laser beam background, period outfit, film grain, Kodak Gold warmth. Previously validated."
+  },
+  "A13": {
+    "template_name": "High Fashion",
+    "category": "A",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "Strong editorial lighting and fashion styling, magazine-grade quality"
+  },
+  "A14": {
+    "template_name": "Cyberpunk Portrait",
+    "category": "A",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 4.9},
+    "notes": "Stunning neon aesthetic — cybernetic augmentations, rain-slicked environment, magenta/cyan lighting, identity clearly preserved"
+  },
+  "B01": {
+    "template_name": "Studio Photoshoot",
+    "category": "B",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "Professional studio quality with clean lighting and natural skin"
+  },
+  "B02": {
+    "template_name": "ID Photo",
+    "category": "B",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "Clean white background, regulation-compliant composition, natural skin"
+  },
+  "B03": {
+    "template_name": "Pet Humanization",
+    "category": "B",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Outstanding — golden retriever in tailored suit with study background, dignified expression, realistic fur-to-fabric transition"
+  },
+  "B04": {
+    "template_name": "Emoji / Sticker Pack",
+    "category": "B",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "All 9 stickers present in 3x3 grid, consistent identity across all, distinct expressions, different outfits, clean sticker design"
+  },
+  "B05": {
+    "template_name": "Avatar / Profile Picture",
+    "category": "B",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "notes": "Stylized portrait suitable for avatar use, identity recognizable"
+  },
+  "C01": {
+    "template_name": "Pet Stylization",
+    "category": "C",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "Adorable kawaii aesthetic with warm pastel tones and plush texture"
+  },
+  "C02": {
+    "template_name": "Baby Comic Grid",
+    "category": "C",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "notes": "2x2 grid achieved with different expressions, manga effects present, colorful"
+  },
+  "C03": {
+    "template_name": "Pet VOGUE Magazine",
+    "category": "C",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "VOGUE text perfectly rendered, luxurious setting, golden robe, sunglasses, editorial quality. All cover text accurate."
+  },
+  "D01": {
+    "template_name": "Outfit Change",
+    "category": "D",
+    "scores": {"prompt_adherence": 4.0, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.0, "overall": 4.3},
+    "notes": "Identity well preserved, blazer rendered naturally. Background changed somewhat (model limitation for pixel-level editing). Good for demo."
+  },
+  "D02": {
+    "template_name": "Hairstyle Change",
+    "category": "D",
+    "scores": {"prompt_adherence": 4.0, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.0, "overall": 4.3},
+    "notes": "Hairstyle changed naturally, face preserved. Some background alteration (known limitation)."
+  },
+  "D03": {
+    "template_name": "Background Change",
+    "category": "D",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "notes": "Background replaced effectively, subject edges natural, lighting reasonably consistent"
+  },
+  "E01": {
+    "template_name": "Social Media Post",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Text perfectly rendered, professional graphic design, warm color palette, ready for posting"
+  },
+  "E02": {
+    "template_name": "Poster Design",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "ALL text correct — 'SPRING AUDITIONS', 'UC Berkeley Music Society', date/location/time. Bold geometric design, clear hierarchy."
+  },
+  "E03": {
+    "template_name": "Storyboard / Comic Strip",
+    "category": "E",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "notes": "4-panel layout achieved, character consistent across panels, clear narrative progression"
+  },
+  "E04": {
+    "template_name": "Handwritten Poster",
+    "category": "E",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 5.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.5},
+    "notes": "Authentic hand-drawn look with markers and crayons, organized sections, colorful and charming"
+  },
+  "E05": {
+    "template_name": "Illustration",
+    "category": "E",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Breathtaking Ghibli-style watercolor — floating islands, sky whales, golden hour lighting, perfect composition. Gallery-worthy."
+  },
+  "F01": {
+    "template_name": "E-commerce Main Image",
+    "category": "F",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Cinematic product photography with premium advertising quality, macro detail, beautiful bokeh"
+  },
+  "F02": {
+    "template_name": "Sticker Set Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.5, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.6},
+    "notes": "3x3 grid, consistent identity, different expressions, clean sticker design"
+  },
+  "F03": {
+    "template_name": "Interior Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 5.0, "style_accuracy": 4.5, "overall": 4.5},
+    "notes": "Scandinavian minimalist style well applied, photorealistic rendering, some layout changes"
+  },
+  "F04": {
+    "template_name": "Logo Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfect flat vector logo — mountain+sun icon, 'ALPINE' correctly spelled, navy+gold palette, minimal and scalable"
+  },
+  "F05": {
+    "template_name": "Merchandise / Keychain Design",
+    "category": "F",
+    "scores": {"prompt_adherence": 4.5, "identity_preservation": 4.0, "visual_quality": 4.5, "style_accuracy": 4.5, "overall": 4.4},
+    "notes": "Collectible figure aesthetic achieved, product photography style, dynamic pose"
+  },
+  "F06": {
+    "template_name": "Coloring Book Page",
+    "category": "F",
+    "scores": {"prompt_adherence": 5.0, "identity_preservation": 5.0, "visual_quality": 5.0, "style_accuracy": 5.0, "overall": 5.0},
+    "notes": "Perfect coloring book page — clean black lines on white, enclosed areas, intricate details, fairy/mushroom/cottage scene exactly as described"
+  },
+  "_meta": {
+    "model": "gemini-3.1-flash-image-preview",
+    "evaluator": "automated + visual quality assessment",
+    "date": "2026-04-08",
+    "scoring_criteria": {
+      "prompt_adherence": "How well the output matches the template's intended output",
+      "identity_preservation": "For photo-based: facial/feature fidelity. For text-based: text accuracy",
+      "visual_quality": "Overall image quality, resolution, absence of artifacts",
+      "style_accuracy": "How accurately the target style/aesthetic is achieved",
+      "overall": "Weighted overall quality score"
+    }
+  }
+}
