@@ -19,10 +19,62 @@ description: >-
 - User uploads a photo and wants to transform it
 - Skill was just installed and user has no specific request yet
 
-## API Tool
+## Image Generation — Dual Mode
+
+This skill supports TWO image generation modes. Always try Mode A first; if unavailable,
+automatically fall back to Mode B.
+
+### Mode A: MCP Tool (preferred if available)
 
 Call `generate_imagen` MCP tool with the final prompt. For templates requiring a reference
 image, pass the user's image via `image_url`.
+
+### Mode B: Direct Script Call (works in ANY sandbox)
+
+When `generate_imagen` MCP tool is NOT available, use the bundled Python script to call
+Gemini 3.1 Flash Image directly via Compass API. The script lives at
+`scripts/generate.py` relative to this skill directory.
+
+**Setup** (one-time, run in shell):
+```bash
+# Option 1: Set env var (recommended for sandboxes)
+export COMPASS_API_KEY='your_compass_api_key_here'
+
+# Option 2: Edit config.json in the skill directory with your key
+# (already pre-configured if the user provided their key)
+```
+
+**Usage — Shell command**:
+```bash
+# Text-only generation
+python3 <SKILL_DIR>/scripts/generate.py "your prompt here" --output result.png
+
+# With reference image (for photo-based templates)
+python3 <SKILL_DIR>/scripts/generate.py "your prompt here" --image photo.jpg --output result.png
+```
+
+**Usage — Inline Python** (when you need more control):
+```python
+import asyncio, sys, os
+sys.path.insert(0, os.path.join('<SKILL_DIR>', 'scripts'))
+from generate import generate_image
+
+result = asyncio.run(generate_image(
+    prompt="your prompt here",
+    output_path="result.png",
+    reference_image="photo.jpg",  # optional
+))
+# result = {"success": True, "output": "result.png"} or {"success": False, "error": "..."}
+```
+
+Replace `<SKILL_DIR>` with the actual path to this skill directory.
+
+### Mode Detection
+
+At the start of every generation request:
+1. Check if `generate_imagen` MCP tool is available → use Mode A
+2. Otherwise → use Mode B (script). Verify `COMPASS_API_KEY` env var or `config.json`
+   has a valid `client_token`. If neither exists, ask the user for their Compass API key.
 
 ## Master Workflow
 
@@ -228,9 +280,12 @@ Once a template is matched:
    - For unfilled placeholders, use the `default:` value in the template
    - For photo-based templates, the user's uploaded image is the reference
 3. **Construct the final prompt** by completing the template pattern
-4. **Call `generate_imagen`**:
-   - `text` → the completed prompt
-   - `image_url` → the user's reference image (if template requires one)
+4. **Generate the image** using the appropriate mode (see "Image Generation — Dual Mode"):
+   - **Mode A** (MCP tool): call `generate_imagen` with `text` = completed prompt, `image_url` = user's reference image
+   - **Mode B** (script): call `generate.py` via shell or inline Python:
+     ```bash
+     python3 <SKILL_DIR>/scripts/generate.py "completed prompt" --image user_photo.jpg --output output.png
+     ```
 5. **Run Quality Check** (Section 6)
 6. **Present the result** to the user with:
    - The generated image

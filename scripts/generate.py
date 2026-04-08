@@ -24,7 +24,9 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 CONFIG_PATHS = [
     PROJECT_DIR / "config.json",
+    Path.home() / ".cursor" / "skills" / "image-gen-templates" / "config.json",
     Path.home() / ".cursor" / "skills" / "image-gen" / "config.json",
+    Path.home() / ".claude" / "skills" / "image-gen-templates" / "config.json",
     Path.home() / ".claude" / "skills" / "image-gen" / "config.json",
 ]
 
@@ -45,8 +47,11 @@ def load_config() -> dict:
             except Exception:
                 continue
 
-    if os.environ.get("COMPASS_CLIENT_TOKEN"):
-        cfg["client_token"] = os.environ["COMPASS_CLIENT_TOKEN"]
+    for env_key in ("COMPASS_CLIENT_TOKEN", "COMPASS_API_KEY"):
+        val = os.environ.get(env_key)
+        if val:
+            cfg["client_token"] = val
+            break
     if os.environ.get("COMPASS_BASE_URL"):
         cfg["base_url"] = os.environ["COMPASS_BASE_URL"]
 
@@ -64,10 +69,12 @@ def get_client() -> genai.Client:
         cfg = load_config()
         if not cfg.get("client_token"):
             print(
-                "ERROR: Compass API client_token not found.\n"
-                "Options:\n"
-                "  1. Set env var: export COMPASS_CLIENT_TOKEN='your_token'\n"
-                "  2. Copy config.json.example to config.json and fill in client_token"
+                "ERROR: Compass API key not found.\n"
+                "Options (any one will work):\n"
+                "  1. export COMPASS_API_KEY='your_key'\n"
+                "  2. export COMPASS_CLIENT_TOKEN='your_key'\n"
+                "  3. python3 generate.py 'prompt' --api-key YOUR_KEY\n"
+                "  4. Edit config.json and set compass_api.client_token"
             )
             sys.exit(1)
         _GENAI_CLIENT = genai.Client(
@@ -182,12 +189,19 @@ async def generate_for_template(
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Generate image with prompt")
+    parser = argparse.ArgumentParser(
+        description="Generate image via Gemini 3.1 Flash Image (Compass API)",
+        epilog="Auth: set COMPASS_API_KEY env var, use --api-key, or configure config.json",
+    )
     parser.add_argument("prompt", help="The image generation prompt")
-    parser.add_argument("--image", help="Reference image path")
+    parser.add_argument("--image", help="Reference image path (for photo-based templates)")
     parser.add_argument("--output", default=f"generated_{int(time.time())}_{uuid.uuid4().hex[:6]}.png",
-                        help="Output file path")
+                        help="Output file path (default: generated_<ts>_<id>.png)")
+    parser.add_argument("--api-key", help="Compass API key (overrides env var and config.json)")
     args = parser.parse_args()
+
+    if args.api_key:
+        os.environ["COMPASS_API_KEY"] = args.api_key
 
     result = asyncio.run(generate_image(args.prompt, args.output, args.image))
     if result["success"]:
