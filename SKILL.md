@@ -87,7 +87,7 @@ START
 ├─ User has a request (text / text+image)
 │  ├─ → INTENT MATCHING (Section 3)
 │  │   ├─ Template matched → TEMPLATE GENERATION (Section 4)
-│  │   └─ No match → FALLBACK GENERATION (Section 5)
+│  │   └─ No match → DELEGATE to image-gen skill (Section 5)
 │  │
 │  └─ → QUALITY CHECK (Section 6)
 │       ├─ Pass → Show result + suggest related templates
@@ -294,44 +294,54 @@ Once a template is matched:
 
 ---
 
-## Section 5: Fallback Generation
+## Section 5: Fallback — Delegate to image-gen Skill
 
-When no template matches the user's request, use the General-Detail-General
-prompt rewriting methodology:
+When NO template in this skill matches the user's request, **delegate to the
+`image-gen` skill** (https://github.com/yufei-eng/image_gen) for prompt rewriting
+and image generation. That skill is a general-purpose prompt optimizer covering
+ANY image generation task.
 
-### Core Rewrite Principles
+### When to Delegate
 
-1. **General-Detail-General structure** — overview → details (primary to secondary) → style anchor
-2. **Narrative prose, not keyword soup** — write as if briefing a human artist
-3. **Spec-first, style-second, constraints-last**
-4. **Exact text in "double quotes"** with explicit typography
-5. **Camera + lighting language** — focal length, angle, light source, temperature
-6. **Material specificity** — "brushed steel", "matte obsidian with metallic flake"
-7. **Film stock for photo scenarios** — "Kodak Gold 200", "Fuji Superia 400"
-8. **Aspect ratio stated explicitly**
-9. **Negative constraints** at the end — what to exclude
-10. **Style anchoring sentence** — final ≤20 words summarizing the target aesthetic
+- User's request is a valid image generation/editing task, BUT does not match any
+  of the 33 templates in Section 1
+- User explicitly asks for something outside the template categories (e.g., food
+  photography, landscape, architecture, abstract art, custom character design)
+- User's intent is ambiguous after Step 3 (Section 3) and none of the top candidates
+  feel like a good fit
 
-### Fallback Prompt Template
+### How to Delegate
 
-```
-Overview: [Medium/style] of [subject + one-sentence description].
+Read the `image-gen` skill's `SKILL.md` and follow its workflow:
 
-Detail-Subject:
-[Primary subject with physical details. 2-3 sentences. Be specific.]
+1. **Classify the user's request** into one of the `image-gen` skill's 6 scenarios:
+   - Avatar / Style Transfer
+   - Local Edit
+   - Poster / Typography
+   - Character Design
+   - Product / Object
+   - General Scene (catch-all)
+2. **Rewrite the prompt** using the matched scenario template and the skill's
+   10 Core Rewrite Principles (GDG structure, narrative prose, camera/lighting
+   language, material specificity, film stock, aspect ratio, negative constraints,
+   style anchoring)
+3. **Generate the image** using the same dual-mode approach (Mode A: MCP tool /
+   Mode B: script — see "Image Generation — Dual Mode" above)
+4. **Run Quality Check** (Section 6 of THIS skill still applies)
 
-Detail-Environment:
-[Setting, time of day, composition, spatial arrangement. Aspect ratio.]
+### After Fallback Generation
 
-Detail-Style:
-[Style reference, mood, lighting, color palette.]
+- Show the result to the user
+- Suggest the 2-3 closest matching templates from THIS skill for their next attempt
+- Example: "I generated this using a general prompt. Next time, you might also like
+  template A14 (Cyberpunk Portrait) or E05 (Illustration) for similar vibes!"
 
-Anchor: [≤20-word aesthetic summary].
-Negative: [2-5 specific exclusions].
-```
+### Skill Location
 
-After generating with the fallback, suggest the closest matching template(s)
-for the user's next attempt.
+The `image-gen` skill should be installed alongside this skill. Common paths:
+- `~/.cursor/skills/image-gen/SKILL.md`
+- `~/.claude/skills/image-gen/SKILL.md`
+- Or read directly from: https://github.com/yufei-eng/image_gen
 
 ---
 
