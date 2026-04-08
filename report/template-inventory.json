@@ -690,21 +690,6 @@
     "has_sample": true
   },
   {
-    "id": "L47",
-    "name": "Beauty & Close-up",
-    "category": "L·Portrait",
-    "priority": "P0",
-    "keywords": "beauty, 美甲, close-up",
-    "scores": {
-      "prompt_adherence": 4.7,
-      "identity_preservation": 4.5,
-      "visual_quality": 4.6,
-      "style_accuracy": 4.8,
-      "overall": 4.7
-    },
-    "has_sample": true
-  },
-  {
     "id": "L48",
     "name": "Photo Grid Layout",
     "category": "L·Portrait",

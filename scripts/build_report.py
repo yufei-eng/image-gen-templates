@@ -69,7 +69,6 @@ TEMPLATE_INFO = {
     "L44": {"name": "Beach & Underwater", "cat": "L·Portrait", "pri": "P0", "kw": "beach, 海边, underwater"},
     "L45": {"name": "Fantasy / Magical Scene", "cat": "L·Portrait", "pri": "P0", "kw": "magic, 魔法学院, fantasy"},
     "L46": {"name": "Social Media / Street Style", "cat": "L·Portrait", "pri": "P0", "kw": "OOTD, Plog, 网感头像"},
-    "L47": {"name": "Beauty & Close-up", "cat": "L·Portrait", "pri": "P0", "kw": "beauty, 美甲, close-up"},
     "L48": {"name": "Photo Grid Layout", "cat": "L·Portrait", "pri": "P0", "kw": "三宫格, grid, triptych"},
     # L: 生活与娱乐 — 萌宠/宝宝
     "L50": {"name": "Pet Stylization", "cat": "L·Pets", "pri": "P0", "kw": "pet, 萌宠, kawaii"},
@@ -255,7 +254,7 @@ tr:hover {{ background: #1a1a1a; }}
 </head>
 <body>
 <h1>Image Generation — High-Heat Template Report</h1>
-<p class="subtitle">75 curated templates for Gemini 3.1 Flash Image (Nano Banana 2) — Generated {datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
+<p class="subtitle">74 curated templates for Gemini 3.1 Flash Image (Nano Banana 2) — Generated {datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
 
 <div class="stats">
   <div class="stat-card">

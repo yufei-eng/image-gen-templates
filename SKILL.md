@@ -1,7 +1,7 @@
 ---
 name: image-gen-templates
 description: >-
-  High-heat template-based image generation skill with 75 curated templates covering
+  High-heat template-based image generation skill with 74 curated templates covering
   stylization, photo scenes, portraits, pets, editing tools, social media, and professional
   design across 3 categories (Life & Entertainment / Media & Work / Professional Design).
   Matches user intent to specific templates for one-click, high-quality generation
@@ -11,7 +11,7 @@ description: >-
 
 # Image Generation — High-Heat Template Skill
 
-75 curated high-quality templates for one-click image generation via Gemini 3.1 Flash Image.
+74 curated high-quality templates for one-click image generation via Gemini 3.1 Flash Image.
 
 ## When to Use
 
@@ -88,7 +88,7 @@ START
 ├─ User has a request (text / text+image)
 │  ├─ → INTENT MATCHING (Section 3)
 │  │   ├─ Template matched → TEMPLATE GENERATION (Section 4)
-│  │   └─ No match → DELEGATE to image-gen skill (Section 5)
+│  │   └─ No match → FALLBACK direct generation (Section 5)
 │  │
 │  └─ → QUALITY CHECK (Section 6)
 │       ├─ Pass → Show result + suggest related templates
@@ -101,10 +101,10 @@ END
 
 ## Section 1: Template Registry
 
-75 templates organized in 3 categories. Read `TEMPLATES.md` in the same skill directory
+74 templates organized in 3 categories. Read `TEMPLATES.md` in the same skill directory
 for the full prompt patterns.
 
-### L: 生活与娱乐 Life & Entertainment (62 templates)
+### L: 生活与娱乐 Life & Entertainment (61 templates)
 
 #### Stylization (29 templates)
 
@@ -140,7 +140,7 @@ for the full prompt patterns.
 | L28 | Pen Sketch / Simple Line | pen sketch, line drawing, ink pen | 钢笔速写, 简笔画, 线描 | Photo |
 | L29 | Dark Fairy Tale | dark fairy tale, gothic, Tim Burton | 暗黑童话, 哥特, 暗黑 | Photo |
 
-#### Portrait & Photo Scenes (19 templates)
+#### Portrait & Photo Scenes (18 templates)
 
 | ID | Template | Keywords (EN) | Keywords (ZH) | Input |
 |----|----------|---------------|---------------|-------|
@@ -161,7 +161,6 @@ for the full prompt patterns.
 | L44 | Beach & Underwater | beach, underwater, ocean, diving | 海边写真, 水下写真, 水中 | Photo |
 | L45 | Fantasy / Magical Scene | magic, wizard, fantasy, spell | 魔法学院, 变成岛主, 星空眼眸 | Photo |
 | L46 | Social Media / Street Style | OOTD, Plog, street style | 网感头像, OOTD, Plog, 站姐 | Photo |
-| L47 | Beauty & Close-up | beauty, close-up, nail art, makeup | 美甲, 美颜, 特写, 美妆 | Photo |
 | L48 | Photo Grid Layout | grid, triptych, photo grid | 三宫格, 樱花三宫格, 宫格 | Photo |
 
 #### Pets & Babies (5 templates)
@@ -219,7 +218,7 @@ When the skill is activated and the user has NO specific image request, present 
 template menu to inspire exploration. Use this EXACT format:
 
 ```
-I can help you create amazing images with 75 high-quality templates! Here are the
+I can help you create amazing images with 74 high-quality templates! Here are the
 most popular ones to try:
 
 🎨 **STYLIZATION** (29 styles to transform your photo)
@@ -233,7 +232,7 @@ most popular ones to try:
   • Gongbi / Fine Brush — Traditional Chinese meticulous painting
   • Pixel Art, Wool Felt, Pop Art, Miniature, and 18 more...
 
-📸 **PORTRAITS & PHOTO SCENES** (19 templates)
+📸 **PORTRAITS & PHOTO SCENES** (18 templates)
   • K-Pop Star — Get the idol concept photo treatment
   • Film / Cinematic — Moody arthouse movie still portrait
   • Indoor Scene — Cozy café or studio apartment vibes
@@ -324,7 +323,6 @@ Template Registry above. If a keyword matches, select that template.
 | photo + "海边" / "beach" / "水下" / "underwater" / "ocean" | L44 |
 | photo + "魔法" / "magic" / "fantasy" / "wizard" / "魔法学院" | L45 |
 | photo + "OOTD" / "Plog" / "网感" / "street style" / "站姐" | L46 |
-| photo + "美甲" / "close-up" / "beauty" / "美颜" / "特写" | L47 |
 | photo + "三宫格" / "grid" / "triptych" / "宫格" | L48 |
 | pet photo + styling keywords | L50 |
 | baby photo + "漫画" / "comic" / "grid" | L51 |
@@ -389,54 +387,40 @@ Once a template is matched:
 
 ---
 
-## Section 5: Fallback — Delegate to image-gen Skill
+## Section 5: Fallback — Direct Generation (No Template Match)
 
-When NO template in this skill matches the user's request, **delegate to the
-`image-gen` skill** (https://github.com/yufei-eng/image_gen) for prompt rewriting
-and image generation. That skill is a general-purpose prompt optimizer covering
-ANY image generation task.
+When NO template in this skill matches the user's request, **generate directly**
+using the user's original query as the prompt basis, without any template.
 
-### When to Delegate
+### When to Fallback
 
 - User's request is a valid image generation/editing task, BUT does not match any
-  of the 75 templates in Section 1
+  of the 74 templates in Section 1
 - User explicitly asks for something outside the template categories (e.g., food
   photography, landscape, architecture, abstract art, custom character design)
 - User's intent is ambiguous after Step 3 (Section 3) and none of the top candidates
   feel like a good fit
 
-### How to Delegate
+### How to Fallback
 
-Read the `image-gen` skill's `SKILL.md` and follow its workflow:
-
-1. **Classify the user's request** into one of the `image-gen` skill's 6 scenarios:
-   - Avatar / Style Transfer
-   - Local Edit
-   - Poster / Typography
-   - Character Design
-   - Product / Object
-   - General Scene (catch-all)
-2. **Rewrite the prompt** using the matched scenario template and the skill's
-   10 Core Rewrite Principles (GDG structure, narrative prose, camera/lighting
-   language, material specificity, film stock, aspect ratio, negative constraints,
-   style anchoring)
-3. **Generate the image** using the same dual-mode approach (Mode A: MCP tool /
-   Mode B: script — see "Image Generation — Dual Mode" above)
-4. **Run Quality Check** (Section 6 of THIS skill still applies)
+1. **Pass the user's original query as-is** — do NOT rewrite or optimize the prompt.
+   Forward the user's raw text (and reference image if provided) directly to the
+   generation tool.
+2. **Generate the image** using fallback priority:
+   - **Priority 1: `generate_imagen` MCP tool** — the AI assistant's built-in image
+     generation tool. Call it directly with the user's original query text (and
+     reference image if the user provided one). This is the preferred fallback path.
+   - **Priority 2: Python script** — if `generate_imagen` MCP tool is NOT available,
+     use `scripts/generate.py` to call Gemini API directly via Compass (same as
+     Mode B in "Image Generation — Dual Mode" above), passing the user's raw query.
+3. **Run Quality Check** (Section 6 still applies)
 
 ### After Fallback Generation
 
 - Show the result to the user
 - Suggest the 2-3 closest matching templates from THIS skill for their next attempt
-- Example: "I generated this using a general prompt. Next time, you might also like
+- Example: "I generated this using a direct prompt. Next time, you might also like
   template L14 (Cyberpunk Portrait) or M05 (Illustration) for similar vibes!"
-
-### Skill Location
-
-The `image-gen` skill should be installed alongside this skill. Common paths:
-- `~/.cursor/skills/image-gen/SKILL.md`
-- `~/.claude/skills/image-gen/SKILL.md`
-- Or read directly from: https://github.com/yufei-eng/image_gen
 
 ---
 

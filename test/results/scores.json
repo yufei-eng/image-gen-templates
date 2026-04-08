@@ -868,19 +868,6 @@
     "notes": "Auto-scored. Image: 896x1200, 1398KB. Awaiting manual review.",
     "timestamp": "2026-04-08T19:45:15.684651"
   },
-  "L47": {
-    "template_name": "Beauty & Close-up",
-    "category": "L",
-    "scores": {
-      "prompt_adherence": 4.7,
-      "identity_preservation": 4.5,
-      "visual_quality": 4.6,
-      "style_accuracy": 4.8,
-      "overall": 4.7
-    },
-    "notes": "Auto-scored. Image: 1024x1024, 1588KB. Awaiting manual review.",
-    "timestamp": "2026-04-08T19:45:15.684963"
-  },
   "L48": {
     "template_name": "Photo Grid Layout",
     "category": "L",

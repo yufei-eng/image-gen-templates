@@ -1,15 +1,15 @@
 # Image Generation — High-Heat Template Skill
 
-75 curated high-quality prompt templates for one-click image generation via **Gemini 3.1 Flash Image** (Nano Banana 2). Organized into 3 major categories — **Life & Entertainment** (62), **Media & Work** (8), **Professional Design** (8) — covering stylization, photo scenes, portraits, pets, editing tools, social media, and professional design.
+74 curated high-quality prompt templates for one-click image generation via **Gemini 3.1 Flash Image** (Nano Banana 2). Organized into 3 major categories — **Life & Entertainment** (61), **Media & Work** (8), **Professional Design** (8) — covering stylization, photo scenes, portraits, pets, editing tools, social media, and professional design.
 
 ## Results
 
-**75/75 templates** generated successfully. Average quality score: **4.70/5.0**
+**74/74 templates** generated successfully. Average quality score: **4.70/5.0**
 
 | Category | Templates | Description |
 |----------|-----------|-------------|
 | L · Stylization | 29 | Chibi, 3D Pixar, Manga, Oil Painting, Anime, Vaporwave, Gongbi, Dark Fairy Tale... |
-| L · Portrait & Photo Scenes | 19 | Studio, Film, Indoor, Dark Mood, Spring Floral, Sunset, Snow, Fantasy, Beach... |
+| L · Portrait & Photo Scenes | 18 | Studio, Film, Indoor, Dark Mood, Spring Floral, Sunset, Snow, Fantasy, Beach... |
 | L · Pets & Babies | 5 | Pet Stylization, Baby Comic, Pet VOGUE, Pet Costume, Pet Humanization |
 | L · Editing & Enhancement | 6 | Outfit Change, Hairstyle, Background, Outpainting, Object Removal, Enhancement |
 | M · Media & Work | 8 | Social Media, Poster, Storyboard, Illustration, YouTube Thumbnail, Picture Book... |
@@ -125,7 +125,7 @@ python scripts/build_report.py
 
 ```
 ├── SKILL.md                     # Main skill file (workflow + intent matching + quality checks)
-├── TEMPLATES.md                 # 75 prompt templates with patterns and quality checklists
+├── TEMPLATES.md                 # 74 prompt templates with patterns and quality checklists
 ├── README.md                    # This file
 ├── scripts/
 │   ├── generate.py              # Gemini API client via Compass LLM Proxy
@@ -145,12 +145,12 @@ python scripts/build_report.py
 
 ## Key Features
 
-- **75 curated templates** covering all major image generation use cases
+- **74 curated templates** covering all major image generation use cases
 - **3-category organization** — Life & Entertainment / Media & Work / Professional Design
 - **Bilingual keyword matching** (English + Chinese) for intent classification
 - **Quality self-check + retry** — per-category verification with surgical edit retry (max 2)
 - **Proactive template showcase** — organized menu for discovery when no specific request
-- **Fallback to image-gen skill** — delegates unmatched queries to general prompt optimizer
+- **Fallback generation** — unmatched queries go directly to `generate_imagen` MCP tool or Python script
 - **Editing tools** — outpainting, object removal, and image enhancement
 - **Objective evaluation** — 5-dimension scoring with reproducible benchmarks
 

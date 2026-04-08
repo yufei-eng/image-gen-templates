@@ -1,6 +1,6 @@
 # High-Heat Template Prompt Library
 
-75 curated prompt templates for Gemini 3.1 Flash Image (Nano Banana 2).
+74 curated prompt templates for Gemini 3.1 Flash Image (Nano Banana 2).
 Each template provides a ready-to-use prompt pattern with `{placeholder}` slots for user customization.
 
 ---
@@ -1572,40 +1572,6 @@ The overall style is a polished plog / street-style / fan-photo aesthetic — sh
 
 ---
 
-### L47 — Beauty & Close-up
-
-**Keywords:** beauty, 美甲, close-up, 美颜, nail art, makeup, macro beauty
-**Input:** User photo (selfie / portrait)
-**Aspect Ratio:** 1:1
-
-**Prompt Pattern:**
-
-```
-Transform the uploaded photo into an extreme close-up beauty image. Preserve identity through eyes, brows, lips, or hands as framed — sharp macro detail suitable for beauty editorials or nail-art showcases.
-
-Focus target: {focus, default: "face-forward beauty — eyes razor-sharp with visible iris texture and natural moisture line, brows detailed, lips with true color and micro-wrinkles optional; OR hands foreground — manicured nails with {nail_art, default: 'gel design, French tips, or jewel accents'} in perfect focus"}.
-
-Lighting: {lighting, default: "studio ring-light or large beauty dish frontal — even, shadow-minimized, circular catch-lights in eyes; optional twin strip boxes for nail sparkle"}.
-
-Skin: {skin, default: "high-end beauty retouch philosophy — pores visible but refined, no waxy plastic, natural subsurface scatter on edges of nose and ears"}.
-
-Background: {bg, default: "seamless soft gradient or blurred studio — non-competing"}.
-
-Camera: {camera, default: "macro or 85–105mm at close focus, f/4–f/8 for sufficient depth on curved surfaces"}.
-
-Composition: square 1:1, tight crop intentional. No text, no watermark.
-
-The overall style is commercial beauty photography — precise, glossy, and product-level without losing human realism.
-```
-
-**Quality Checklist:**
-- [ ] Critical focal plane (eyes or nails) tack-sharp
-- [ ] Ring-light or beauty dish motivation clear
-- [ ] Skin refined but not artificial
-- [ ] Square crop suits avatar / feed thumbnail
-
----
-
 ### L48 — Photo Grid Layout
 
 **Keywords:** grid, 三宫格, 樱花三宫格, photo grid, triptych, multi-panel
@@ -2767,7 +2733,6 @@ The overall style is a premium brand campaign visual worthy of an Apple or Sony 
 | L44 | Beach & Underwater | L · 生活与娱乐 · 写真/人像 | Photo |
 | L45 | Fantasy / Magical Scene | L · 生活与娱乐 · 写真/人像 | Photo |
 | L46 | Social Media / Street Style | L · 生活与娱乐 · 写真/人像 | Photo |
-| L47 | Beauty & Close-up | L · 生活与娱乐 · 写真/人像 | Photo |
 | L48 | Photo Grid Layout | L · 生活与娱乐 · 写真/人像 | Photo |
 | L50 | Pet Stylization | L · 生活与娱乐 · 萌宠/宝宝 | Pet photo |
 | L51 | Baby Comic Grid | L · 生活与娱乐 · 萌宠/宝宝 | Baby photo |

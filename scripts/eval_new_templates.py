@@ -313,23 +313,6 @@ NEW_TEMPLATES = {
         ),
         "ref": SELFIE,
     },
-    "L47": {
-        "name": "Beauty & Close-up",
-        "prompt": (
-            "Transform the uploaded photo into an extreme close-up beauty image. "
-            "Preserve identity through eyes, brows, and lips — sharp macro detail suitable for beauty editorials. "
-            "Focus target: face-forward beauty — eyes razor-sharp with visible iris texture and natural moisture line, "
-            "brows detailed, lips with true color and micro-wrinkles. "
-            "Lighting: studio ring-light — even, shadow-minimized, circular catch-lights in eyes. "
-            "Skin: high-end beauty retouch philosophy — pores visible but refined, no waxy plastic, "
-            "natural subsurface scatter on edges of nose and ears. "
-            "Background: seamless soft gradient — non-competing. "
-            "Camera: 85-105mm at close focus, f/4-f/8 for sufficient depth on curved surfaces. "
-            "Composition: square 1:1, tight crop intentional. No text, no watermark. "
-            "The overall style is commercial beauty photography — precise, glossy, and product-level without losing human realism."
-        ),
-        "ref": SELFIE,
-    },
     "L48": {
         "name": "Photo Grid Layout",
         "prompt": (
