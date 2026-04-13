@@ -27,12 +27,12 @@ automatically fall back to Mode B.
 
 ### Mode A: MCP Tool (preferred if available)
 
-Call `generate_imagen` MCP tool with the final prompt. For templates requiring a reference
+Call `imagen_generate` MCP tool with the final prompt. For templates requiring a reference
 image, pass the user's image via `image_url`.
 
 ### Mode B: Direct Script Call (works in ANY sandbox)
 
-When `generate_imagen` MCP tool is NOT available, use the bundled Python script to call
+When `imagen_generate` MCP tool is NOT available, use the bundled Python script to call
 Gemini 3.1 Flash Image directly via Compass API. The script lives at
 `scripts/generate.py` relative to this skill directory.
 
@@ -73,7 +73,7 @@ Replace `<SKILL_DIR>` with the actual path to this skill directory.
 ### Mode Detection
 
 At the start of every generation request:
-1. Check if `generate_imagen` MCP tool is available → use Mode A
+1. Check if `imagen_generate` MCP tool is available → use Mode A
 2. Otherwise → use Mode B (script). Verify `COMPASS_API_KEY` env var or `config.json`
    has a valid `client_token`. If neither exists, ask the user for their Compass API key.
 
@@ -374,7 +374,7 @@ Once a template is matched:
    - For photo-based templates, the user's uploaded image is the reference
 3. **Construct the final prompt** by completing the template pattern
 4. **Generate the image** using the appropriate mode (see "Image Generation — Dual Mode"):
-   - **Mode A** (MCP tool): call `generate_imagen` with `text` = completed prompt, `image_url` = user's reference image
+   - **Mode A** (MCP tool): call `imagen_generate` with `text` = completed prompt, `image_url` = user's reference image
    - **Mode B** (script): call `generate.py` via shell or inline Python:
      ```bash
      python3 <SKILL_DIR>/scripts/generate.py "completed prompt" --image user_photo.jpg --output output.png
@@ -407,10 +407,10 @@ using the user's original query as the prompt basis, without any template.
    Forward the user's raw text (and reference image if provided) directly to the
    generation tool.
 2. **Generate the image** using fallback priority:
-   - **Priority 1: `generate_imagen` MCP tool** — the AI assistant's built-in image
+   - **Priority 1: `imagen_generate` MCP tool** — the AI assistant's built-in image
      generation tool. Call it directly with the user's original query text (and
      reference image if the user provided one). This is the preferred fallback path.
-   - **Priority 2: Python script** — if `generate_imagen` MCP tool is NOT available,
+   - **Priority 2: Python script** — if `imagen_generate` MCP tool is NOT available,
      use `scripts/generate.py` to call Gemini API directly via Compass (same as
      Mode B in "Image Generation — Dual Mode" above), passing the user's raw query.
 3. **Run Quality Check** (Section 6 still applies)
