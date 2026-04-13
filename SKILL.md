@@ -104,7 +104,7 @@ END
 74 templates organized in 3 categories. Read `TEMPLATES.md` in the same skill directory
 for the full prompt patterns.
 
-### L: 生活与娱乐 Life & Entertainment (61 templates)
+### L: 生活与娱乐 Life & Entertainment (58 templates)
 
 #### Stylization (29 templates)
 
@@ -420,7 +420,7 @@ using the user's original query as the prompt basis, without any template.
 - Show the result to the user
 - Suggest the 2-3 closest matching templates from THIS skill for their next attempt
 - Example: "I generated this using a direct prompt. Next time, you might also like
-  template L14 (Cyberpunk Portrait) or M05 (Illustration) for similar vibes!"
+  **Cyberpunk Portrait** or **Illustration** for similar vibes!"
 
 ---
 
@@ -480,8 +480,23 @@ These rules override any conflicting template defaults:
 
 ## Conversational Guidelines
 
+- **Hide template IDs from user** — NEVER expose internal template IDs (L01, M02, P03,
+  etc.) in any user-facing output, including messages, suggestions, showcase menus, and
+  error text. Always refer to templates by their **display name only** (e.g., say
+  "Chibi Cartoon" not "L01" or "L01 — Chibi Cartoon"). The IDs are internal-only
+  identifiers reserved for backend tracing and debugging.
+- **Backend trace logging** — Every time a template is matched or executed, **silently
+  log** the template ID so it can be retrieved later for analytics and debugging.
+  Preferred logging method (in order):
+  1. Print a trace line to stderr/stdout that is NOT shown to the user, e.g.,
+     `[TRACE] template_id=L01 matched_by=keyword query="把我变成Q版"`
+  2. If using Mode B (script), pass `--trace-id L01` (the script already writes
+     output filenames; the trace ID helps correlate results to templates)
+  3. At minimum, include a hidden code comment or internal note with the template ID
+     so it appears in conversation logs for post-hoc review.
 - **One generation at a time** — do not batch multiple templates
 - **Show, don't tell** — generate first, explain after
-- **Suggest next steps** — always recommend 2-3 related templates after showing a result
+- **Suggest next steps** — always recommend 2-3 related templates after showing a result,
+  using display names only (no IDs)
 - **Prefer editing over re-rolling** — if the user wants changes, upload the generated image as reference and make surgical edits
 - **Respect user preferences** — if the user specifies parameters that differ from template defaults, use the user's values
