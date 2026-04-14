@@ -485,15 +485,14 @@ These rules override any conflicting template defaults:
   error text. Always refer to templates by their **display name only** (e.g., say
   "Chibi Cartoon" not "L01" or "L01 — Chibi Cartoon"). The IDs are internal-only
   identifiers reserved for backend tracing and debugging.
-- **Backend trace logging** — Every time a template is matched or executed, **silently
-  log** the template ID so it can be retrieved later for analytics and debugging.
-  Preferred logging method (in order):
-  1. Print a trace line to stderr/stdout that is NOT shown to the user, e.g.,
-     `[TRACE] template_id=L01 matched_by=keyword query="把我变成Q版"`
-  2. If using Mode B (script), pass `--trace-id L01` (the script already writes
-     output filenames; the trace ID helps correlate results to templates)
-  3. At minimum, include a hidden code comment or internal note with the template ID
-     so it appears in conversation logs for post-hoc review.
+- **Template tracing** — Every time a template is matched or executed, record the
+  template ID for analytics. **NEVER output any trace, log, or debug text in your
+  response to the user** — in agent mode, ALL text output is user-visible; there is
+  no stderr or hidden channel. Acceptable recording methods:
+  1. Mode B (script): pass `--trace-id L01` as a CLI argument (the script handles logging)
+  2. Include the template ID in the tool call arguments if the tool supports a `trace_id` field
+  3. If no silent channel is available, simply skip trace logging — never compromise
+     user experience for internal debugging
 - **One generation at a time** — do not batch multiple templates
 - **Show, don't tell** — generate first, explain after
 - **Suggest next steps** — always recommend 2-3 related templates after showing a result,
