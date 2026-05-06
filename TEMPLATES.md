@@ -990,36 +990,6 @@ The overall style is a seasonal editorial portrait — fresh, romantic, and unmi
 
 ---
 
-### L40 — European Market Lifestyle
-
-**Keywords:** european market, lifestyle, farmers market, cobblestone, travel portrait
-**Input:** User photo (selfie / portrait)
-**Aspect Ratio:** 9:16
-
-**Prompt Pattern:**
-
-```
-Transform the uploaded photo into a full-body lifestyle portrait walking through a European open-air farmers market. The subject walks toward the camera on a cobblestone street, mid-stride, with a soft confident smile. Preserve the subject's exact facial identity, face shape, and features.
-
-{outfit, default: "a green linen button-up shirt tied in a front knot at the waist, cream wide-leg linen trousers, and brown leather loafers"}
-
-Carrying a natural canvas tote bag over the right shoulder, filled with fresh vegetables — kale, tomatoes, and herbs.
-
-Background: {scene, default: "a sunny European piazza farmers market with colorful Mediterranean building facades (terracotta red, warm yellow, sage green) lining the street, green canvas awnings over produce stalls overflowing with vibrant fruits and vegetables, blurred pedestrians browsing in the distance"}.
-
-Lighting: bright natural sunlight from front-left, soft diffused quality around 5500K, gentle shadows on the cobblestones, even illumination on the face with no harsh shadows. Aspect ratio 9:16 vertical.
-
-Shot on Sony A7IV, 85mm f/1.8, natural light lifestyle photography, clean warm color grading. No text, no watermark, no logo, no over-smoothing, no HDR look, no indoor elements.
-```
-
-**Quality Checklist:**
-- [ ] Face identity preserved from input photo
-- [ ] Full-body visible with cobblestone street and market stalls in background
-- [ ] Green/warm Mediterranean color palette, natural daylight feel
-- [ ] Canvas tote bag with visible fresh produce
-
----
-
 ### L42 — Retro Film & Polaroid
 
 **Keywords:** in-car film, polaroid, vintage selfie, film, retro camera
